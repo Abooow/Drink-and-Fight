@@ -1,1 +1,1 @@
-# Group1
+# Drink and Fight - the game
