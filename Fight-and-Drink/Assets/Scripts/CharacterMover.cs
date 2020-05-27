@@ -3,38 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// A class that holds values related to the players movement
-public class CharacterMover : MonoBehaviour
+
+/// <summary>
+/// An abstract class that holds values related to the players movement.
+/// </summary>
+public abstract class CharacterMover : MonoBehaviour
 {
-    
-    public float MaxStamina { get; set; }
-    public float CurrentStamina { get; set; }
-    public float Speed { get; set; }
-    public enum MovingState { }
-    public float LimpingMultiplier { get; set; }
-    public float WalkingMultiplier { get; set; }
-    public float SprintingMultiplier { get; set; }
-    
-    // Start is called before the first frame update
-    void Start()
+    public float MaxStamina;
+    public float CurrentStamina;
+    public float Speed;
+    public MovingState MovingState;
+    public float LimpingMultiplier;
+    public float WalkingMultiplier;
+    public float SprintingMultiplier;
+
+
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    virtual protected void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
+    virtual protected void Update()
     {
         
     }
 
-    //Returnerar speed
-    public float GetSpeed()
-    {
-        return this.Speed;
-    }
+    
+    /// <summary>
+    /// This gets and returns speed.
+    /// </summary>
+    /// <returns></returns>
+    public abstract float GetSpeed();
+
 }
 
-enum MovingState
+public enum MovingState
 {
     Standing,
     Limping,
