@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// An abstract class that holds values related to the players movement.
 /// </summary>
-public class CharacterMover : MonoBehaviour
+public abstract class CharacterMover : MonoBehaviour
 {
     public float MaxStamina = 100;
     public float CurrentStamina = 100;
@@ -37,10 +37,8 @@ public class CharacterMover : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     /// 
-    public float GetSpeed()
-    {
-        return this.Speed;
-    }
+    public abstract float GetSpeed();
+
 
 }
 
