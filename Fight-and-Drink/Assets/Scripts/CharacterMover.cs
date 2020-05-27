@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 /// <summary>
 /// An abstract class that holds values related to the players movement.
 /// </summary>
-public abstract class CharacterMover : MonoBehaviour
+public class CharacterMover : MonoBehaviour
 {
-    public float MaxStamina;
-    public float CurrentStamina;
-    public float Speed;
+    public float MaxStamina = 100;
+    public float CurrentStamina = 100;
+    public float Speed = WorldConstants.CharacterSpeed;
     public MovingState MovingState;
     public float LimpingMultiplier;
     public float WalkingMultiplier;
     public float SprintingMultiplier;
-
-
 
     /// <summary>
     /// Start is called before the first frame update.
@@ -35,12 +32,15 @@ public abstract class CharacterMover : MonoBehaviour
         
     }
 
-    
     /// <summary>
     /// This gets and returns speed.
     /// </summary>
     /// <returns></returns>
-    public abstract float GetSpeed();
+    /// 
+    public float GetSpeed()
+    {
+        return this.Speed;
+    }
 
 }
 
