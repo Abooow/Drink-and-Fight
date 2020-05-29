@@ -31,6 +31,9 @@ public class PlayerMovement : CharacterMover
 
         rb2d.AddForce(moveDirection * GetSpeed() * Time.deltaTime);
 
+        //Debug.Log(moveDirection * GetSpeed() * Time.deltaTime);
+        
+
 
     }
 
