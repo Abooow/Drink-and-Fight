@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 /// <summary>
 /// An abstract class that holds values related to the players movement.
@@ -21,7 +18,6 @@ public abstract class CharacterMover : MonoBehaviour
     /// </summary>
     virtual protected void Start()
     {
-        
     }
 
     /// <summary>
@@ -29,7 +25,6 @@ public abstract class CharacterMover : MonoBehaviour
     /// </summary>
     virtual protected void Update()
     {
-        
     }
 
     /// <summary>
@@ -38,10 +33,11 @@ public abstract class CharacterMover : MonoBehaviour
     /// <returns></returns>
     /// 
     public abstract float GetSpeed();
-
-
 }
 
+/// <summary>
+/// Used to track the movement state of a character. 
+/// </summary>
 public enum MovingState
 {
     Standing,

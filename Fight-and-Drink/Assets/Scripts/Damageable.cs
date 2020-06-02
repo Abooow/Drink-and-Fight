@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Damagables : MonoBehaviour
 {
@@ -8,12 +6,9 @@ public class Damagables : MonoBehaviour
 
     virtual protected void TakeDamage(float damage)
     {
-        
     }
 
     virtual protected void OnDeath()
     {
-
     }
-
 }

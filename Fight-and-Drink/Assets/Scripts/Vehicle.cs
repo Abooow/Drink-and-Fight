@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 /// <summary>
 /// class vehicle for cars in the game
@@ -17,7 +14,6 @@ public class Vehicle : MonoBehaviour
     /// </summary>
     virtual protected void Accelerate()
     {
-
     }
 
     /// <summary>
@@ -25,6 +21,5 @@ public class Vehicle : MonoBehaviour
     /// </summary>
     virtual protected void Brake()
     {
-
     }
 }
