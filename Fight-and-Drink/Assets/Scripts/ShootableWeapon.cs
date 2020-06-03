@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// 
+/// Defines a weapon that will shoot bullets (raycasts).
 /// </summary>
 public class ShootableWeapon : MonoBehaviour, IWeapon
 {
     public string Name { get; set; }
     public string Description { get; set; }
+    public int OrderIndex { get; set; }
     public float FireRate { get; set; }
 
     public Transform WeaponMuzzle;
@@ -24,7 +25,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     private bool canShoot;
 
     /// <summary>
-    /// Start is called before the first frame update
+    /// Start is called before the first frame update.
     /// </summary>
     private void Start()
     {
@@ -32,7 +33,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     }
 
     /// <summary>
-    /// Update is called once per frame
+    /// Update is called once per frame.
     /// </summary>
     private void Update()
     {
@@ -40,6 +41,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
         {
             if (!isReloading)
             {
+                // FireRate timer.
                 fireTimer += Time.deltaTime;
                 if (fireTimer >= FireRate)
                 {
@@ -49,6 +51,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
             }
             else
             {
+                // Reloading timer.
                 reloadTimer += Time.deltaTime;
                 if (reloadTimer >= ReloadSpeed)
                 {
@@ -59,13 +62,16 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
 
                     if (TotalBullets - MagazineCapacity < 0)
                     {
+                        // Use remaining ammo.
                         CurrentBullets = TotalBullets;
                         TotalBullets = 0;
                     }
                     else
                     {
-                        CurrentBullets = MagazineCapacity;
-                        TotalBullets -= MagazineCapacity;
+                        // Fill magazine to full.
+                        int newFill = MagazineCapacity - CurrentBullets;
+                        CurrentBullets += newFill;
+                        TotalBullets -= newFill;
                     }
                 }
             }
@@ -73,7 +79,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     }
 
     /// <summary>
-    /// 
+    /// Shoots a raycast forward from the WeaponMuzzle position.
     /// </summary>
     public void Shoot()
     {
@@ -94,7 +100,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     }
 
     /// <summary>
-    /// 
+    /// Prepares this weapon to be reloaded.
     /// </summary>
     public void Reload()
     {
@@ -102,13 +108,5 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
 
         canShoot = false;
         isReloading = true;
-    }
-}
-
-class Damageable // Remove!
-{
-    public void TakeDamage(float damage)
-    {
-
     }
 }
