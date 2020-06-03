@@ -42,7 +42,7 @@ public class WeaponManager : MonoBehaviour
         bool weaponExisted = false;
         foreach (GameObject weaponObj in weapons)
         {
-            if (weaponObj == null || !newWeaponObj.TryGetComponent(out IWeapon weapon)) continue;
+            if (weaponObj == null || !weaponObj.TryGetComponent(out IWeapon weapon)) continue;
 
             if (weapon.Name == newWeapon.Name)
             {
@@ -63,24 +63,28 @@ public class WeaponManager : MonoBehaviour
         // Adds and instantiates a new weapon to the weapon list if the weapon didn't exist.
         if (!weaponExisted)
         {
+            GameObject weaponCopy = Instantiate(newWeaponObj, transform);
+            weaponCopy.SetActive(false);
+            // Don't use parent scale.
+            Vector3 scale = new Vector3(newWeaponObj.transform.localScale.x / transform.localScale.x, newWeaponObj.transform.localScale.y / transform.localScale.y, newWeaponObj.transform.localScale.z / transform.localScale.z);
+            weaponCopy.transform.localScale = scale;
+
             for (int i = 0; i < TotalWeapons + 1; i++)
             {
                 if (i == TotalWeapons)
                 {
-                    weapons.Add(newWeaponObj);
+                    weapons.Add(weaponCopy);
                     break;
                 }
 
                 if (weapons[i] == null) continue;
 
-                if (newWeapon.OrderIndex > weapons[i].GetComponent<IWeapon>().OrderIndex)
+                if (newWeapon.OrderIndex < weapons[i].GetComponent<IWeapon>().OrderIndex)
                 {
-                    weapons.Insert(i, newWeaponObj);
+                    weapons.Insert(i, weaponCopy);
                     break;
                 }
             }
-
-            Instantiate(newWeaponObj, transform).SetActive(false);
         }
     }
 
@@ -125,14 +129,20 @@ public class WeaponManager : MonoBehaviour
     /// <param name="index">The index to use when changing weapon.</param>
     public void SetWeapon(int index)
     {
+        // CurrentWeapon?.gameObject.SetActive(false/true) doesn't work...
+        void SetWeaponActive(bool active)
+        {
+            if (CurrentWeapon != null) CurrentWeapon.gameObject.SetActive(active);
+        }
+
         if (index < 0) index = TotalWeapons - 1;
         else if (index >= TotalWeapons) index = 0;
 
-        CurrentWeapon?.SetActive(false);
+        SetWeaponActive(false);
 
         weaponIndex = index;
         CurrentWeapon = weapons[weaponIndex];
 
-        CurrentWeapon?.SetActive(true);
+        SetWeaponActive(true);
     }
 }

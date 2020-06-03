@@ -5,10 +5,12 @@
 /// </summary>
 public class ShootableWeapon : MonoBehaviour, IWeapon
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int OrderIndex { get; set; }
-    public float FireRate { get; set; }
+    public static int RotationOffset = 90;
+
+    public string Name { get => _name; set => _name = value; }
+    public string Description { get => _description; set => _description = value; }
+    public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
+    public float FireRate { get => _fireRate; set => _fireRate = value; }
 
     public Transform WeaponMuzzle;
     public float MaxBulletDistance;
@@ -23,6 +25,11 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     private float fireTimer;
     private bool isReloading;
     private bool canShoot;
+
+    [SerializeField] private string _name;
+    [SerializeField] private string _description;
+    [SerializeField] private int _orderIndex;
+    [SerializeField] private float _fireRate;
 
     /// <summary>
     /// Start is called before the first frame update.
@@ -83,11 +90,16 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     /// </summary>
     public void Shoot()
     {
-        if (!canShoot || !isReloading || CurrentBullets <= 0) return;
+        if (!canShoot || isReloading) return;
+        if (CurrentBullets <= 0)
+        {
+            Reload();
+            return;
+        }
 
-        float offset = Random.Range(-BulletSpread, BulletSpread);
-        float startAngle = transform.rotation.z;
-        Vector2 rayDir = new Vector2(Mathf.Cos(startAngle + offset), Mathf.Sin(startAngle + offset));
+        float offset = Random.Range(-BulletSpread, BulletSpread) + RotationOffset;
+        float startAngle = transform.eulerAngles.z;
+        Vector2 rayDir = new Vector2(Mathf.Cos((startAngle + offset) * 0.0174532925f), Mathf.Sin((startAngle + offset) * 0.0174532925f));
 
         RaycastHit2D hit;
         if (hit = Physics2D.Raycast(WeaponMuzzle.position, rayDir, MaxBulletDistance))
@@ -95,6 +107,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
         }
 
+        canShoot = false;
         CurrentBullets--;
         if (CurrentBullets <= 0) Reload();
     }

@@ -5,10 +5,10 @@
 /// </summary>
 public class ThrowableWeapon : MonoBehaviour, IWeapon
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int OrderIndex { get; set; }
-    public float FireRate { get; set; }
+    public string Name { get => _name; set => _name = value; }
+    public string Description { get => _description; set => _description = value; }
+    public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
+    public float FireRate { get => _fireRate; set => _fireRate = value; }
 
     public GameObject ThrowObject;
     public float MaxThrowDistance;
@@ -16,6 +16,11 @@ public class ThrowableWeapon : MonoBehaviour, IWeapon
 
     private float throwTimer;
     private bool canThrow;
+
+    [SerializeField] private string _name;
+    [SerializeField] private string _description;
+    [SerializeField] private int _orderIndex;
+    [SerializeField] private float _fireRate;
 
     /// <summary>
     /// Start is called before the first frame update.

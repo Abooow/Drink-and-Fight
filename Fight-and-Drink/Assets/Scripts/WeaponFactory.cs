@@ -12,7 +12,7 @@ public class WeaponFactory : MonoBehaviour
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }
@@ -26,7 +26,7 @@ public class WeaponFactory : MonoBehaviour
     {
         foreach (GameObject weaponObj in Instance.Weapons)
         {
-            if (weaponObj.TryGetComponent(out IWeapon weapon) && weapon.Name == name) return weaponObj; 
+            if (weaponObj.TryGetComponent(out IWeapon weapon) && weapon.Name == name) return weaponObj;
         }
 
         return null;
