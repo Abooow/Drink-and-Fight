@@ -30,9 +30,12 @@ public class PlayerMovement : CharacterMover
         rb2d.AddForce(moveDirection * GetSpeed() * Time.deltaTime);
     }
 
+    /// <summary>
+    /// This function finds out what state the player is in.
+    /// </summary>
+    /// <returns>It returns the wanted speed based on the players state.</returns>
     public override float GetSpeed()
     {
-
 
         switch (this.MovingState)
         {
