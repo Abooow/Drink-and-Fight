@@ -24,10 +24,10 @@ public class PlayerMovement : CharacterMover
 
         transform.rotation = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+        
+        Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-
-        rb2d.AddForce(moveDirection * GetSpeed() * Time.deltaTime);
+        transform.Translate(moveDirection * GetSpeed() * Time.deltaTime, Space.World);
     }
 
     public override float GetSpeed()

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 54272264}
   - component: {fileID: 54272268}
   - component: {fileID: 54272269}
+  - component: {fileID: 54272270}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,14 +149,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54272263}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af4df5d40ab6b0849bc6698286b6f2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStamina: 100
   CurrentStamina: 100
-  Speed: 100
+  Speed: 5
   MovingState: 2
   LimpingMultiplier: 0.5
   WalkingMultiplier: 1
@@ -238,12 +239,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54272263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 96.93021, y: -49.381058, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &54272268
 BoxCollider2D:
@@ -290,6 +291,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &54272270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f4912358e3cad4c862c6cce6fae942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &885954720573823214
 PrefabInstance:
@@ -514,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 6621734850926506802, guid: 2302899aaa9ee0f4880701a8ae118428,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6621734850926506802, guid: 2302899aaa9ee0f4880701a8ae118428,
         type: 3}
