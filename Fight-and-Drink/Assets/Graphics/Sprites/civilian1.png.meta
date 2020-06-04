@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: b78176a3885a19d47893c2815512e329
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9115419317314805277
+    second: civilian 1.v1_0
+  - first:
+      213: 38416001222257956
+    second: civilian 1.v1_1
+  - first:
+      213: 1564597129389672922
+    second: civilian 1.v1_2
+  - first:
+      213: -3155759114934739161
+    second: civilian 1.v1_3
+  - first:
+      213: 3431412518479556595
+    second: civilian 1.v1_4
+  - first:
+      213: -6082149667454953875
+    second: civilian 1.v1_5
+  - first:
+      213: 7899966710598552288
+    second: civilian 1.v1_6
+  - first:
+      213: 4247730166562546611
+    second: civilian 1.v1_7
+  - first:
+      213: 1874105050072637601
+    second: civilian 1.v1_8
+  - first:
+      213: -3283407140281228029
+    second: civilian 1.v1_9
+  - first:
+      213: -3555594140937378762
+    second: civilian 1.v1_10
+  - first:
+      213: 4049984269576044199
+    second: civilian 1.v1_11
+  - first:
+      213: -96955323788098659
+    second: civilian 1.v1_12
+  - first:
+      213: -1327211593285639361
+    second: civilian 1.v1_13
+  - first:
+      213: -640646735272855028
+    second: civilian 1.v1_14
+  - first:
+      213: 3051134774831015488
+    second: civilian 1.v1_15
+  - first:
+      213: 6992660063447258188
+    second: civilian 1.v1_16
+  - first:
+      213: 6378135653356187327
+    second: civilian 1.v1_17
+  - first:
+      213: 785755908880404915
+    second: civilian 1.v1_18
+  - first:
+      213: -2040151782302580762
+    second: civilian 1.v1_19
+  - first:
+      213: -2041113995093998836
+    second: civilian 1.v1_20
+  - first:
+      213: 6729870381066492266
+    second: civilian 1.v1_21
+  - first:
+      213: -2594528525454028620
+    second: civilian 1.v1_22
+  - first:
+      213: -3150755671312617307
+    second: civilian 1.v1_23
+  - first:
+      213: -4407437168195163994
+    second: civilian 1.v1_24
+  - first:
+      213: 2020871706834622970
+    second: civilian 1.v1_25
+  - first:
+      213: -1186419497502886290
+    second: civilian 1.v1_26
+  - first:
+      213: -7742189800833621370
+    second: civilian 1.v1_27
+  - first:
+      213: 7152586768615807782
+    second: civilian 1.v1_28
+  - first:
+      213: 8963815774361332560
+    second: civilian 1.v1_29
+  - first:
+      213: 4108021618220111219
+    second: civilian 1.v1_30
+  - first:
+      213: -4260294799763676353
+    second: civilian 1.v1_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: civilian 1.v1_0
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 668
+        width: 50
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1a2186ec424bb4f911f53bbf404ab1
+      internalID: 9115419317314805277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_1
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 578
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d2de98b0c8d91448e72cad27d05b5f
+      internalID: 38416001222257956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_2
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 501
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117a206e54bdcef43b5053c4241aeb60
+      internalID: 1564597129389672922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_3
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 402
+        width: 73
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7938e55a3285d488d077af212e9c6a
+      internalID: -3155759114934739161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 264
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542e42e017c928b4082e7c4596bce93f
+      internalID: 3431412518479556595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_5
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 268
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70bbbcff43b5b04bb54eb2d876ca486
+      internalID: -6082149667454953875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_6
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 325
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85754d1ceb92cbb48b116df8622c25b2
+      internalID: 7899966710598552288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_7
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 268
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93fb3ac964e4a14aae04901a61abeff
+      internalID: 4247730166562546611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_8
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 268
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4655cb9ca741d54a92f05ce71de50a8
+      internalID: 1874105050072637601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_9
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 264
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae29b1bec801864aa56164b5b50c48a
+      internalID: -3283407140281228029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_10
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 325
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6056651f17b314daa486d59c8f8240
+      internalID: -3555594140937378762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_11
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 267
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dea449572e8dba488ccbb6cdd9cb55a
+      internalID: 4049984269576044199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_12
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 261
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1c22866ad43c34fb118da3369bfdd5
+      internalID: -96955323788098659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_13
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 191
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f54bc115be8664cab89c711920822c
+      internalID: -1327211593285639361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_14
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 197
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824de36db37a5f3428e19510a88b1988
+      internalID: -640646735272855028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_15
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 194
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc63224144a87694e939ae0f03784e68
+      internalID: 3051134774831015488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_16
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 194
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4a24628bf930e4ba19c41ae76e33c4
+      internalID: 6992660063447258188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_17
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 191
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0312d1bf34dfc8f45a96318414aa9d90
+      internalID: 6378135653356187327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_18
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 191
+        width: 57
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3095f56b26b201c49ba4e748b46227ae
+      internalID: 785755908880404915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_19
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 120
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bc733bb9e7f114ebbfb72a1fd005a6
+      internalID: -2040151782302580762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_20
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 127
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af06050f6d7f4841a92fa8b52256a04
+      internalID: -2041113995093998836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_21
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 181
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0b22e4794aa904d89e8889fa95bc2c
+      internalID: 6729870381066492266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_22
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 114
+        width: 67
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fab8b4e55748d64280fc6a9f2fe934a
+      internalID: -2594528525454028620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_23
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 111
+        width: 63
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faa3edbbb6cf7240bc2fabe0a68a5fa
+      internalID: -3150755671312617307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_24
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 114
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890f620f880a9824089b163dd27922a9
+      internalID: -4407437168195163994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_25
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 130
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a912b70b498883842afc8e774f27de18
+      internalID: 2020871706834622970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_26
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 28
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b78ff7bc63a748b41bcccaaa9cad3
+      internalID: -1186419497502886290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_27
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 28
+        width: 63
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b74a656f8b50e458c76974d13be2cf
+      internalID: -7742189800833621370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_28
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 31
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042d1c7dfc7b36841b854350516aa42c
+      internalID: 7152586768615807782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_29
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 34
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f74c54694a56494ba03b7e720acaae0
+      internalID: 8963815774361332560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_30
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 44
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4a023dd9e63d048a0c83ec8a803a5b
+      internalID: 4108021618220111219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: civilian 1.v1_31
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 44
+        width: 70
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97bc2d0404afb843a1efc49e0327593
+      internalID: -4260294799763676353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
