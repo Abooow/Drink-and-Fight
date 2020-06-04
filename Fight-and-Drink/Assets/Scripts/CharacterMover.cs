@@ -42,6 +42,7 @@ public enum MovingState
     Standing,
     Limping,
     Walking,
-    Running
+    Running,
+    LimpingRun
 }
 

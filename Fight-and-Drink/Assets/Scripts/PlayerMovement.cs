@@ -27,24 +27,29 @@ public class PlayerMovement : CharacterMover
 
         Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
-        rb2d.AddForce(moveDirection * GetSpeed() * Time.deltaTime);
+        if (moveDirection == Vector2.zero) MovingState = MovingState.Standing;
+        else if (Input.GetKey(KeyCode.LeftShift)) MovingState = MovingState.Running;
+        else MovingState = MovingState.Walking;
+
+        transform.Translate(moveDirection * GetSpeed() * Time.deltaTime, Space.World);
     }
 
     /// <summary>
-    /// This function finds out what state the player is in.
+    /// Get the speed of the player depending on the MovingState.
     /// </summary>
-    /// <returns>It returns the wanted speed based on the players state.</returns>
+    /// <returns>The wanted speed based on the players state.</returns>
     public override float GetSpeed()
     {
-
-        switch (this.MovingState)
+        switch (MovingState)
         {
             case MovingState.Limping:
-                return this.Speed * this.LimpingMultiplier;
+                return Speed * LimpingMultiplier;
             case MovingState.Walking:
-                return this.Speed * this.WalkingMultiplier;
+                return Speed * WalkingMultiplier;
             case MovingState.Running:
-                return this.Speed * this.RunningMultiplier;
+                return Speed * RunningMultiplier;
+            case MovingState.LimpingRun:
+                return Speed * LimpingMultiplier * RunningMultiplier;
             default:
                 return 0;
         }
