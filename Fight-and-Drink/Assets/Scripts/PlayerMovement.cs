@@ -32,6 +32,7 @@ public class PlayerMovement : CharacterMover
 
     public override float GetSpeed()
     {
+<<<<<<< HEAD
 
         switch (this.MovingState)
         {
@@ -46,3 +47,8 @@ public class PlayerMovement : CharacterMover
         }
     }
 }
+=======
+        return this.Speed;
+    }
+}
+>>>>>>> 133-PlayerMovement

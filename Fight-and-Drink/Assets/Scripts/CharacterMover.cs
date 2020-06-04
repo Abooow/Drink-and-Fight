@@ -9,9 +9,15 @@ public abstract class CharacterMover : MonoBehaviour
     public float CurrentStamina = 100;
     public float Speed = WorldConstants.CharacterSpeed;
     public MovingState MovingState;
+<<<<<<< HEAD
     public float LimpingMultiplier = 0.5f;
     public float WalkingMultiplier = 1f;
     public float RunningMultiplier = 1.5f;
+=======
+    public float LimpingMultiplier;
+    public float WalkingMultiplier;
+    public float SprintingMultiplier;
+>>>>>>> 133-PlayerMovement
 
     /// <summary>
     /// Start is called before the first frame update.
@@ -44,4 +50,8 @@ public enum MovingState
     Limping,
     Walking,
     Running
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 133-PlayerMovement
