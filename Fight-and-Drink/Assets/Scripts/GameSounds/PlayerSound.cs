@@ -37,5 +37,8 @@ public class PlayerSound : MonoBehaviour
         if (cm.MovingState == MovingState.Walking && Walk.isPlaying == false) { Walk.Play(); }
         else if (cm.MovingState == MovingState.Running && Run.isPlaying == false) { Run.Play(); }
         else if (cm.MovingState == MovingState.Standing && Standing.isPlaying == false) { Standing.PlayDelayed((float)rnd.Next(2, 25)); }
+        else if (cm.MovingState != MovingState.Walking) { Walk.Pause(); }
+        else if (cm.MovingState != MovingState.Running) { Run.Pause(); }
+        else if (cm.MovingState != MovingState.Standing) { Standing.Pause(); }
     }
 }

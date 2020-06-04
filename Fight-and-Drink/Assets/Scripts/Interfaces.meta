@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Fight-and-Drink/Assets/Scripts/Interfaces.meta
-guid: e989fbb94c48c3a40be596f8968d97f8
-=======
-guid: 6d07ab78f91f3af49bc8620d34ef7f0e
->>>>>>> 255-Player-Animation:Fight-and-Drink/Assets/Animations/Explosion.meta
+guid: 20d5f8ea79b0d1e409fc8c4cd0f9d4a4
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
