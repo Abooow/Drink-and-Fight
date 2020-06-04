@@ -5,8 +5,8 @@
 /// </summary>
 public class CharacterStats : MonoBehaviour
 {
-    public float MaxHp;
-    public float CurrentHp;
+    public float MaxHealth;
+    public float CurrentHealth;
     public float Armor;
     public bool IsDead;
     public float Strength;
