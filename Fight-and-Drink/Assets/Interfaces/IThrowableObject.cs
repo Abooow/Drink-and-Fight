@@ -1,18 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class IThrowableObject : MonoBehaviour
+/// <summary>
+/// An object that can psychically be thrown.
+/// </summary>
+public interface IThrowableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    GameObject GameObject { get; set; }
+    float Damage { get; set; }
 }
