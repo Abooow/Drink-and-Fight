@@ -1,0 +1,1471 @@
+fileFormatVersion: 2
+guid: 3d37ec037df0bb5438cb00345f1ed655
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3204626872376701279
+    second: polis_0
+  - first:
+      213: 4150898321116715216
+    second: polis_1
+  - first:
+      213: 4353603590469611496
+    second: polis_2
+  - first:
+      213: 7852208632449685154
+    second: polis_3
+  - first:
+      213: -5657732334046089888
+    second: polis_4
+  - first:
+      213: -6856274096602993742
+    second: polis_5
+  - first:
+      213: 2821204135162536814
+    second: polis_6
+  - first:
+      213: 3605939857835513139
+    second: polis_7
+  - first:
+      213: -6682560545507654140
+    second: polis_8
+  - first:
+      213: 4733752925590168962
+    second: polis_9
+  - first:
+      213: 6588091974570313832
+    second: polis_10
+  - first:
+      213: 8184851158539155004
+    second: polis_11
+  - first:
+      213: 775288042674956269
+    second: polis_12
+  - first:
+      213: 6313972616092513880
+    second: polis_13
+  - first:
+      213: 294340261995988066
+    second: polis_14
+  - first:
+      213: 4198504921899422975
+    second: polis_15
+  - first:
+      213: -418664999187292729
+    second: polis_16
+  - first:
+      213: 4641965473982314729
+    second: polis_17
+  - first:
+      213: 1162949344402146346
+    second: polis_18
+  - first:
+      213: 2185173634277684304
+    second: polis_19
+  - first:
+      213: -7428566127613124449
+    second: polis_20
+  - first:
+      213: 3544822347154955468
+    second: polis_21
+  - first:
+      213: 3244654600041755608
+    second: polis_22
+  - first:
+      213: 6375660549960478618
+    second: polis_23
+  - first:
+      213: 5363602637223723258
+    second: polis_24
+  - first:
+      213: -4902979813964911767
+    second: polis_25
+  - first:
+      213: -3880939868748639495
+    second: polis_26
+  - first:
+      213: -3353307421290211979
+    second: polis_27
+  - first:
+      213: 692372868092269619
+    second: polis_28
+  - first:
+      213: 2858625972600755197
+    second: polis_29
+  - first:
+      213: -7274769955029424216
+    second: polis_30
+  - first:
+      213: -5457855941967352267
+    second: polis_31
+  - first:
+      213: 2714230503022105247
+    second: polis_32
+  - first:
+      213: 3584030215726918813
+    second: polis_33
+  - first:
+      213: -8682218264699532484
+    second: polis_34
+  - first:
+      213: -5750730824619317858
+    second: polis_35
+  - first:
+      213: -6377972513709972929
+    second: polis_36
+  - first:
+      213: 6558371219622809648
+    second: polis_37
+  - first:
+      213: 7751540362079063168
+    second: polis_38
+  - first:
+      213: 8654551310927884782
+    second: polis_39
+  - first:
+      213: 3811569607234621059
+    second: polis_40
+  - first:
+      213: -3985911082835103793
+    second: polis_41
+  - first:
+      213: -5139136726402181339
+    second: polis_42
+  - first:
+      213: 3039634384375870343
+    second: polis_43
+  - first:
+      213: -2177694862786018859
+    second: polis_44
+  - first:
+      213: 4232789455016009364
+    second: polis_45
+  - first:
+      213: -7790465221682456480
+    second: polis_46
+  - first:
+      213: -8040722185866978901
+    second: polis_47
+  - first:
+      213: 313092043143937847
+    second: polis_48
+  - first:
+      213: 1420175940648803810
+    second: polis_49
+  - first:
+      213: 4727063291328251601
+    second: polis_50
+  - first:
+      213: 6212462675846030457
+    second: polis_51
+  - first:
+      213: -7240511609998240534
+    second: polis_52
+  - first:
+      213: 8356660907758898215
+    second: polis_53
+  - first:
+      213: 6630508686713677203
+    second: polis_54
+  - first:
+      213: 5545676275447011850
+    second: polis_55
+  - first:
+      213: 5217425789974095771
+    second: polis_56
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: polis_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b0c78dc449c934f98d29eebc74446e
+      internalID: 3204626872376701279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 938
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc51ca04738c5a2428642a66956c481c
+      internalID: 4150898321116715216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 937
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a2ebc6198ee9a4f8d28261b78ff997
+      internalID: 4353603590469611496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 938
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef7d51da48ca63428d546ad8bc8444b
+      internalID: 7852208632449685154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 938
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff3ea576b9a9ef4abcf663eaebf9d58
+      internalID: -5657732334046089888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 941
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff21c700ef866d84d865efb6fe191246
+      internalID: -6856274096602993742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_6
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 940
+        width: 45
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9fc91ffbc58a0449c65e8324251edb
+      internalID: 2821204135162536814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 941
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2182c9ead9d90244493dbeac3216a7c5
+      internalID: 3605939857835513139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 831
+        width: 50
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b1fafb30ea8324787ac83716ffc2f8
+      internalID: -6682560545507654140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 834
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61835d0a1b68bb04cb4edaa0ac840adf
+      internalID: 4733752925590168962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 832
+        width: 50
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a734eab2feca0fd4b86768cfc145d052
+      internalID: 6588091974570313832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 922
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129fe418c91855a41ae526381c7c0fe1
+      internalID: 8184851158539155004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_12
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 833
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3639f94ab3e62db46a584defb3209da7
+      internalID: 775288042674956269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9173aec3bd0764a9b13f1bfd865e67
+      internalID: 6313972616092513880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 832
+        width: 50
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b0d63f809884e4fa5c0b19c2daa914
+      internalID: 294340261995988066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_15
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 833
+        width: 50
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3622fe14710a35249b643d404288cbd6
+      internalID: 4198504921899422975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 830
+        width: 50
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa883d3cc5638f4f88de77a2208cb89
+      internalID: -418664999187292729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 711
+        width: 50
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6433c7590393d458ce55fd006f2e6d
+      internalID: 4641965473982314729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 711
+        width: 50
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3154be8096aca2a469b599ce08b75e19
+      internalID: 1162949344402146346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 711
+        width: 50
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac0e00fd1683ef4fa14f799c46c004c
+      internalID: 2185173634277684304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_20
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 713
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29241d5c1b50fa74d88d1e884f663313
+      internalID: -7428566127613124449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 711
+        width: 50
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45163291d2a5bff4aa4855a7130586c7
+      internalID: 3544822347154955468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 713
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657aa227086525a4aa4aa7b9da4d33d7
+      internalID: 3244654600041755608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 711
+        width: 50
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36ef1b25072b6e429213b276fec3a20
+      internalID: 6375660549960478618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_24
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 713
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c731993f189fb545a37883bd37e62ba
+      internalID: 5363602637223723258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 597
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884d5ad0190ade641a84d6e8da084644
+      internalID: -4902979813964911767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_26
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 584
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e076574c03c2249adc78d6066e8191
+      internalID: -3880939868748639495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_27
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 572
+        width: 98
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5925bfae6731b4da28caa5858b9ccc
+      internalID: -3353307421290211979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_28
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 567
+        width: 48
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d122e0123902a6e47a04426f36e12328
+      internalID: 692372868092269619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_29
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 566
+        width: 48
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d79237479a2aa4a957f88051a03c5d
+      internalID: 2858625972600755197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_30
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 472
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a0bbbab5ba86e479e6e439580a2451
+      internalID: -7274769955029424216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_31
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 472
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988d4fcde2c03cb4194162b94e660e4e
+      internalID: -5457855941967352267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_32
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 460
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8c2188920124a4bab01c1209fdad12
+      internalID: 2714230503022105247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 460
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0214baa4ec66b946b89e6b376ba04b5
+      internalID: 3584030215726918813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_34
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 426
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f7730e557e6134e8a278da98400ce2
+      internalID: -8682218264699532484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_35
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 426
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea7d093fcaad424ea99571d6a3ecf8f
+      internalID: -5750730824619317858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_36
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 426
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cd49dbcab3c324e9e008e422e187da
+      internalID: -6377972513709972929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_37
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 426
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5434317459bba4685c880b36c16ff9
+      internalID: 6558371219622809648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_38
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 426
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e53c3793b6e194c9c8a33632caf73c
+      internalID: 7751540362079063168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_39
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 426
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75a8ee2b2d4f404b9830fbeea43f795
+      internalID: 8654551310927884782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_40
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 426
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a4f11cf323e644d94e37888cfb2428
+      internalID: 3811569607234621059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_41
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 423
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfa87e2d22d31a4db7cee9dcfad3f1e
+      internalID: -3985911082835103793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_42
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 426
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5ee9642904f0b459dcaf5f59a7e07e
+      internalID: -5139136726402181339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_43
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 426
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b049e6dd9e3c148b45a7344f0e7c2b
+      internalID: 3039634384375870343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_44
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 426
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d550c93c78f124eb706e0d4e903f4d
+      internalID: -2177694862786018859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_45
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 409
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bc014f9c413d24ba8b108e464fcc9a
+      internalID: 4232789455016009364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_46
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 392
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa70c31ef309d5d448068617fa625e2c
+      internalID: -7790465221682456480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_47
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 392
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265e5f7bd0e97d44e9fc3b86e6f59681
+      internalID: -8040722185866978901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_48
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 392
+        width: 35
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617bee1f2b468f544baf5a8963b5a92a
+      internalID: 313092043143937847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_49
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 376
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c170a4f92da0c88438e2fb7e11f3b53c
+      internalID: 1420175940648803810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_50
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 376
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b54106853e23d4e832c6d5e7a096db
+      internalID: 4727063291328251601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_51
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 376
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3c2c48b43e3b1488d4c73d12651929
+      internalID: 6212462675846030457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_52
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 376
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0871604cd4a949f48994861054bfdf5a
+      internalID: -7240511609998240534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_53
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 376
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cbc106e84078d4ea92cc04f3b2ffc1
+      internalID: 8356660907758898215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_54
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 376
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4672595db7ef45e489dc18c1c25c39b8
+      internalID: 6630508686713677203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_55
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 359
+        width: 39
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b58f54d7e3deb4bafb0e292f0cd102
+      internalID: 5545676275447011850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: polis_56
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 342
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de374598b9e69948b377d961fedca64
+      internalID: 5217425789974095771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
