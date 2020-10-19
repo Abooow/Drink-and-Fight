@@ -5,6 +5,9 @@
 /// </summary>
 public class PlayerMovement : CharacterMover
 {
+    public Transform LookAtTarget;
+    public float RotationOffset = -90f;
+
     private Rigidbody2D rb2d;
 
     /// <summary>
@@ -20,11 +23,16 @@ public class PlayerMovement : CharacterMover
     /// </summary>
     protected override void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        HandleLookAt();
+    }
 
-        transform.rotation = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
-        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+    private void FixedUpdate()
+    {
+        Move();
+    }
 
+    private void Move()
+    {
         Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
         if (moveDirection == Vector2.zero) MovingState = MovingState.Standing;
@@ -32,6 +40,22 @@ public class PlayerMovement : CharacterMover
         else MovingState = MovingState.Walking;
 
         transform.Translate(moveDirection * GetSpeed() * Time.deltaTime, Space.World);
+    }
+
+    private void HandleLookAt() 
+    {
+        Vector2 lookAtPosition;
+        if (LookAtTarget == null)
+        {
+            lookAtPosition = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        }
+        else
+        {
+            lookAtPosition = LookAtTarget.position;
+        }
+
+        float angle = Mathf.Atan2(lookAtPosition.y, lookAtPosition.x) * Mathf.Rad2Deg + RotationOffset;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     /// <summary>

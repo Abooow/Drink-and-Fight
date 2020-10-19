@@ -33,7 +33,6 @@ public class PlayerSound : MonoBehaviour
     }
     void UpdateSound()
     {
-        Debug.Log(Walk.isPlaying);
         if (cm.MovingState == MovingState.Walking && Walk.isPlaying == false) { Walk.Play(); }
         else if (cm.MovingState == MovingState.Running && Run.isPlaying == false) { Run.Play(); }
         else if (cm.MovingState == MovingState.Standing && Standing.isPlaying == false) { Standing.PlayDelayed((float)rnd.Next(2, 25)); }
