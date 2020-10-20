@@ -6,7 +6,8 @@ public interface IWeapon
     string Name { get; set; }
     string Description { get; set; }
     int OrderIndex { get; set; }
-    float FireRate { get; set; }
+    bool CanAttack { get; set; }
 
-    void Shoot();
+    void Attack();
+    void HandleAddWeapon(IWeapon other);
 }

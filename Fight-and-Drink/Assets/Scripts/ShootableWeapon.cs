@@ -11,6 +11,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     public string Description { get => _description; set => _description = value; }
     public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
     public float FireRate { get => _fireRate; set => _fireRate = value; }
+    public bool CanAttack { get => _canAttack; set => _canAttack = value; }
 
     public Transform WeaponMuzzle;
     public float MaxBulletDistance;
@@ -30,6 +31,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
     [SerializeField] private string _description;
     [SerializeField] private int _orderIndex;
     [SerializeField] private float _fireRate;
+    [SerializeField] private bool _canAttack;
 
     /// <summary>
     /// Start is called before the first frame update.
@@ -121,5 +123,17 @@ public class ShootableWeapon : MonoBehaviour, IWeapon
 
         canShoot = false;
         isReloading = true;
+    }
+
+    [System.Obsolete("Use Shoot() instead")]
+    public void Attack()
+    {
+        Shoot();
+    }
+
+    public void HandleAddWeapon(IWeapon other)
+    {
+        if (other is ShootableWeapon shootable)
+            TotalBullets += shootable.CurrentBullets + shootable.TotalBullets;
     }
 }

@@ -1,32 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void WeaponEvent(IWeapon weapon);
+
 /// <summary>
 /// Managers all the weapons a character can hold.
 /// </summary>
 public class WeaponManager : MonoBehaviour
 {
     public GameObject CurrentWeapon;
+    public WeaponEvent OnWeaponChanged;
 
     public int TotalWeapons => weapons.Count;
 
-    private List<GameObject> weapons;
+    private List<GameObject> weapons = new List<GameObject>();
     private int weaponIndex;
-
-    /// <summary>
-    /// Start is called before the first frame update.
-    /// </summary>
-    private void Start()
-    {
-        if (weapons == null)
-        {
-            weapons = new List<GameObject>()
-            {
-                null // null = punch.
-            };
-        }
-        else weapons.Insert(0, null);
-    }
 
     /// <summary>
     /// Adds a weapon to the weapon list, if the weapon already exists, then the ammo from the newWeaponObj will be added onto the existing weapon.
@@ -34,26 +22,21 @@ public class WeaponManager : MonoBehaviour
     /// <param name="newWeaponObj">The new weapon to add.</param>
     public void AddWeapon(GameObject newWeaponObj)
     {
-        if (newWeaponObj == null) return;
-
-        if (!newWeaponObj.TryGetComponent(out IWeapon newWeapon)) return;
+        if (newWeaponObj == null)
+            return;
+        if (!newWeaponObj.TryGetComponent(out IWeapon newWeapon))
+            return;
 
         // Adds the ammo from newWeaponObj to the existing weapon if the weapon already exists.
         bool weaponExisted = false;
         foreach (GameObject weaponObj in weapons)
         {
-            if (weaponObj == null || !weaponObj.TryGetComponent(out IWeapon weapon)) continue;
+            if (weaponObj == null || !weaponObj.TryGetComponent(out IWeapon weapon))
+                continue;
 
             if (weapon.Name == newWeapon.Name)
             {
-                if (weapon is ShootableWeapon shootable && newWeapon is ShootableWeapon newShootable)
-                {
-                    shootable.TotalBullets += newShootable.CurrentBullets + newShootable.TotalBullets;
-                }
-                else if (weapon is ThrowableWeapon throwable && newWeapon is ThrowableWeapon newThrowable)
-                {
-                    throwable.CurrentThrowables += newThrowable.CurrentThrowables;
-                }
+                weapon.HandleAddWeapon(newWeapon);
 
                 weaponExisted = true;
                 break;
@@ -77,7 +60,8 @@ public class WeaponManager : MonoBehaviour
                     break;
                 }
 
-                if (weapons[i] == null) continue;
+                if (weapons[i] == null)
+                    continue;
 
                 if (newWeapon.OrderIndex < weapons[i].GetComponent<IWeapon>().OrderIndex)
                 {
@@ -99,7 +83,8 @@ public class WeaponManager : MonoBehaviour
             if (weapons[i].TryGetComponent(out IWeapon weapon) && weapon.Name == weaponName)
             {
                 weapons.Remove(weapons[i]);
-                if (CurrentWeapon == weapons[i]) NextWeapon();
+                if (CurrentWeapon == weapons[i])
+                    NextWeapon();
                 Destroy(weapons[i]);
 
                 break;
@@ -132,17 +117,25 @@ public class WeaponManager : MonoBehaviour
         // CurrentWeapon?.gameObject.SetActive(false/true) doesn't work...
         void SetWeaponActive(bool active)
         {
-            if (CurrentWeapon != null) CurrentWeapon.gameObject.SetActive(active);
+            if (CurrentWeapon != null)
+                CurrentWeapon.gameObject.SetActive(active);
         }
 
-        if (index < 0) index = TotalWeapons - 1;
-        else if (index >= TotalWeapons) index = 0;
+        if (index < 0)
+            index = TotalWeapons - 1;
+        else if (index >= TotalWeapons)
+            index = 0;
 
         SetWeaponActive(false);
-
+        int lastIndex = weaponIndex;
         weaponIndex = index;
         CurrentWeapon = weapons[weaponIndex];
-
         SetWeaponActive(true);
+
+        if (lastIndex != weaponIndex)
+        {
+            if (OnWeaponChanged != null && CurrentWeapon.TryGetComponent<IWeapon>(out IWeapon newWeapon))
+                OnWeaponChanged.Invoke(newWeapon);
+        }
     }
 }
