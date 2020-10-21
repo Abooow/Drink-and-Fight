@@ -9,7 +9,7 @@ public delegate void WeaponEvent(IWeapon weapon);
 public class WeaponManager : MonoBehaviour
 {
     public GameObject CurrentWeapon;
-    public WeaponEvent OnWeaponChanged;
+    public event WeaponEvent OnWeaponChanged;
 
     public int TotalWeapons => weapons.Count;
 
