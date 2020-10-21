@@ -22,7 +22,6 @@ public class Radio : MonoBehaviour
     void Start()
     {
         Instance = this;
-        OnSongResumed += (channel) => Debug.Log("Now Playing: " + channel.Name);
 
         if (Channels == null) Channels = new List<RadioChannel>();
         IsPlaying = false;
@@ -70,7 +69,7 @@ public class Radio : MonoBehaviour
         IsPlaying = true;
         if (OnSongResumed != null) OnSongResumed.Invoke(CurrentChannel);
 
-        //StartCoroutine("ShowChannelLogo");
+        StartCoroutine("ShowChannelLogo");
         CurrentChannel?.Resume();
         AudioSource.Play();
     }
@@ -84,30 +83,30 @@ public class Radio : MonoBehaviour
     {
         if (CurrentChannel != null && CurrentChannel.ImageLogo != null)
             CurrentChannel.ImageLogo.SetActive(false);
-        //StopCoroutine("ShowChannelLogo");
+        StopCoroutine("ShowChannelLogo");
 
         AudioSource.Stop();
         IsPlaying = false;
     }
 
-    //IEnumerator ShowChannelLogo()
-    //{
-    //    if (CurrentChannel == null) yield return null;
+    private static Color alphaColor = new Color(1f, 1f, 1f, 0.8f);
+    IEnumerator ShowChannelLogo()
+    {
+        if (CurrentChannel == null || CurrentChannel.ImageLogo == null) yield break;
+        Image image = CurrentChannel.ImageLogo.GetComponent<Image>();
+        if (image == null) yield break;
 
-    //    Image image = CurrentChannel.ImageLogo.GetComponent<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+        CurrentChannel.ImageLogo.SetActive(true);
+        yield return new WaitForSeconds(2);
 
-    //    if (image != null) image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
-    //    CurrentChannel.ImageLogo?.SetActive(true);
-    //    yield return new WaitForSeconds(2);
-
-    //    if (image == null) yield return null;
-    //    while (image.color.a > 0.02f)
-    //    {
-    //        yield return new WaitForSeconds(0.07f);
-    //        image.color *= 0.8f;
-    //    }
-    //    CurrentChannel.ImageLogo?.SetActive(false);
-    //}
+        while (image.color.a > 0.02f)
+        {
+            yield return new WaitForSeconds(0.07f);
+            image.color *= alphaColor;
+        }
+        CurrentChannel.ImageLogo.SetActive(false);
+    }
 }
 
 [Serializable]

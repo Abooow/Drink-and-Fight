@@ -30,7 +30,7 @@ public class Vehicle : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (inVehicle && Input.GetKey(KeyCode.E))
+        if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
             vehicleScript.enabled = false;
             player.SetActive(true);
@@ -39,11 +39,11 @@ public class Vehicle : MonoBehaviour
             player.transform.position = this.gameObject.transform.position;
             Radio.Instance.Pause();
         }
-         if(inVehicle && Input.GetKey(KeyCode.F1)) 
+         if(inVehicle && Input.GetKeyDown(KeyCode.F1)) 
         {
             Radio.Instance.NextChannel();
         }
-         if(inVehicle && Input.GetKey(KeyCode.F4))
+         if(inVehicle && Input.GetKeyDown(KeyCode.F4))
         {
             if (!pauseRadio)
             {
@@ -76,7 +76,7 @@ public class Vehicle : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (collision.tag == "Player" && Input.GetKey(KeyCode.F) && inVehicle == false)
+        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
         {           
             OnEnterVehicle(collision);
         }
