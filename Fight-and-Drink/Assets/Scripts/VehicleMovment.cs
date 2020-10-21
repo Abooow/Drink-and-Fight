@@ -22,6 +22,10 @@ public class VehicleMovment : MonoBehaviour
         {
             Brake();
         }
+        if (Input.GetKey("s"))
+        {
+            Reverse();
+        }
         if (Input.GetKey("d"))
         {
             car.rotation += -TurningRate;
@@ -38,9 +42,15 @@ public class VehicleMovment : MonoBehaviour
     {
         if(MaxSpeed > car.velocity.magnitude)
         {
-            Debug.Log(car.velocity.magnitude);
             car.AddForce(transform.up * Acceleration);
         }
+    }
+    /// <summary>
+    /// Adds backwards force to the vehicle equal to the Acceleration * 0.7 
+    /// </summary>
+    public void Reverse()
+    {
+        car.AddForce(-transform.up * Acceleration * 0.7f);
     }
     /// <summary>
     /// Slows down the vehicle if the player does not accelerate
