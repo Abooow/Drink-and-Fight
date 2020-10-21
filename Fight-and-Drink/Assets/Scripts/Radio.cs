@@ -92,7 +92,7 @@ public class Radio : MonoBehaviour
     private static Color alphaColor = new Color(1f, 1f, 1f, 0.8f);
     IEnumerator ShowChannelLogo()
     {
-        if (CurrentChannel == null || CurrentChannel.ImageLogo == null) yield break;
+        if (CurrentChannel?.ImageLogo == null) yield break;
         Image image = CurrentChannel.ImageLogo.GetComponent<Image>();
         if (image == null) yield break;
 
