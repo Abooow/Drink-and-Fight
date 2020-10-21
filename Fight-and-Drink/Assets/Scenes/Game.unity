@@ -822,6 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 0
   Acceleration: 10
+  TurningRate: 4
   car: {fileID: 766878715}
 --- !u!50 &766878715
 Rigidbody2D:
