@@ -9,6 +9,9 @@ public class VehicleMovment : MonoBehaviour
     public float TurningRate;
     public Rigidbody2D car; 
 
+    /// <summary>
+    /// Updates each frame and takes the input of the user to steer the car
+    /// </summary>
     void FixedUpdate()
     {
         if(Input.GetKey("w"))
@@ -28,11 +31,20 @@ public class VehicleMovment : MonoBehaviour
             car.rotation += TurningRate;
         }
     }
+    /// <summary>
+    /// Adds force equal to the Acceleration to the vehicle if the current velocity is less than the MaxSpeed
+    /// </summary>
     public void Accelerate()
     {
-        car.AddForce(transform.up*Acceleration);
-        Debug.Log("BRUMM");
+        if(MaxSpeed > car.velocity.magnitude)
+        {
+            Debug.Log(car.velocity.magnitude);
+            car.AddForce(transform.up * Acceleration);
+        }
     }
+    /// <summary>
+    /// Slows down the vehicle if the player does not accelerate
+    /// </summary>
     public void Brake()
     {
         car.velocity = car.velocity * 0.95f;

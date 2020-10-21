@@ -820,9 +820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6ce1491edb84e41889c8e1aba984fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 0
+  MaxSpeed: 20
   Acceleration: 10
-  TurningRate: 4
+  TurningRate: 1
   car: {fileID: 766878715}
 --- !u!50 &766878715
 Rigidbody2D:
