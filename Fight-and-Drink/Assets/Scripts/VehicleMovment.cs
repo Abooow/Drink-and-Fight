@@ -8,7 +8,7 @@ public class VehicleMovment : MonoBehaviour
     public float Acceleration;
     public Rigidbody2D car; 
 
-    void Update()
+    void FixedUpdate()
     {
         if(Input.GetKey("w"))
         {
