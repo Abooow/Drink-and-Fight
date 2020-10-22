@@ -11,10 +11,13 @@ public class Vehicle : MonoBehaviour
     public float Acceleration;
     public float Weight;
     private bool inVehicle = false;
+    private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
     private GameObject player;
 
-
+    /// <summary>
+    /// Called before the first frame update
+    /// </summary>
     public void Start()
     {
         vehicleScript = GetComponent<VehicleMovment>();
@@ -22,11 +25,13 @@ public class Vehicle : MonoBehaviour
         vehicleScript.enabled = false;
     }
 
+    /// <summary>
+    /// Called once per frame
+    /// </summary>
     void Update()
     {
-        if (inVehicle == true && Input.GetKey(KeyCode.E))
+        if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("EXIT");
             vehicleScript.enabled = false;
             player.SetActive(true);
             player.transform.parent = null;
@@ -34,10 +39,22 @@ public class Vehicle : MonoBehaviour
             player.transform.position = this.gameObject.transform.position;
             Radio.Instance.Pause();
         }
-         if(inVehicle == true && Input.GetKey(KeyCode.F1)) 
+         if(inVehicle && Input.GetKeyDown(KeyCode.F1)) 
         {
-            Debug.Log("INSIDE f2");
             Radio.Instance.NextChannel();
+        }
+         if(inVehicle && Input.GetKeyDown(KeyCode.F4))
+        {
+            if (!pauseRadio)
+            {
+                Radio.Instance.Pause();
+                pauseRadio = true;
+            }
+            else if (pauseRadio)
+            {
+                Radio.Instance.Resume();
+                pauseRadio = false;
+            }
         }
    
     }
@@ -59,7 +76,7 @@ public class Vehicle : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (collision.tag == "Player" && Input.GetKey(KeyCode.F) && inVehicle == false)
+        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
         {           
             OnEnterVehicle(collision);
         }
