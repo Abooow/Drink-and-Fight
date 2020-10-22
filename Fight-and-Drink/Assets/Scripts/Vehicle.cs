@@ -26,7 +26,7 @@ public class Vehicle : MonoBehaviour
     }
 
     /// <summary>
-    /// Called once per frame
+    /// Called once per frame.
     /// </summary>
     void Update()
     {
@@ -73,6 +73,11 @@ public class Vehicle : MonoBehaviour
     {
     }
 
+    /// <summary>
+    /// Triggers when Player object is inside vehicle collider2d area
+    /// </summary>
+    /// <param name="collision">Collider2D object that is inside vehicle car Collider2D. 
+    /// In this case Player</param>
     private void OnTriggerStay2D(Collider2D collision)
     {
 
@@ -82,6 +87,11 @@ public class Vehicle : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Used when user is "inside" vehicle 
+    /// </summary>
+    /// <param name="collision">Collider2D object that is inside vehicle car Collider2D. 
+    /// In this case Player</param>
     private void OnEnterVehicle(Collider2D collision)
     {
         Radio.Instance.Resume();
