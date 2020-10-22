@@ -8,20 +8,6 @@ public class VehicleMovment : MonoBehaviour
     public float Acceleration;
     public float TurningRate;
     public Rigidbody2D car;
-    private bool inVehicle = false;
-    private bool pauseRadio = false;
-    private VehicleMovment vehicleScript;
-    private GameObject player;
-
-    /// <summary>
-    /// Called before the first frame update
-    /// </summary>
-    public void Start()
-    {
-        vehicleScript = GetComponent<VehicleMovment>();
-
-        vehicleScript.enabled = false;
-    }
 
     /// <summary>
     /// Updates each frame and takes the input of the user to steer the car
@@ -51,33 +37,6 @@ public class VehicleMovment : MonoBehaviour
             car.rotation += TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
-        //Radio code
-        if (inVehicle && Input.GetKeyDown(KeyCode.E))
-        {
-            vehicleScript.enabled = false;
-            player.SetActive(true);
-            player.transform.parent = null;
-            inVehicle = false;
-            player.transform.position = this.gameObject.transform.position;
-            Radio.Instance.Pause();
-        }
-        if (inVehicle && Input.GetKeyDown(KeyCode.F1))
-        {
-            Radio.Instance.NextChannel();
-        }
-        if (inVehicle && Input.GetKeyDown(KeyCode.F4))
-        {
-            if (!pauseRadio)
-            {
-                Radio.Instance.Pause();
-                pauseRadio = true;
-            }
-            else if (pauseRadio)
-            {
-                Radio.Instance.Resume();
-                pauseRadio = false;
-            }
-        }
     }
     /// <summary>
     /// Adds force equal to the Acceleration to the vehicle if the current velocity is less than the MaxSpeed
@@ -103,24 +62,4 @@ public class VehicleMovment : MonoBehaviour
     {
         car.velocity = car.velocity * 0.95f;
     }
-     private void OnTriggerStay2D(Collider2D collision)
-    {
-
-        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
-        {           
-            OnEnterVehicle(collision);
-        }
-    }
-
-    private void OnEnterVehicle(Collider2D collision)
-    {
-        Radio.Instance.Resume();
-        inVehicle = true;
-        player = collision.gameObject;
-        Debug.Log("boom");
-        collision.gameObject.SetActive(false);
-        collision.transform.parent = this.gameObject.transform;
-        vehicleScript.enabled = true; 
-    }
-
 }
