@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class VehicleMovment : MonoBehaviour
     private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
     private GameObject player;
+    public float CarIdle= 0.1f;
+    public float CarDriftingSpeed = 0.8f;
 
     /// <summary>
     /// Called before the first frame update
@@ -28,10 +31,14 @@ public class VehicleMovment : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+
+        checkIdleCar();
         //Checks the input to drive accordingly
         if(Input.GetKey("w"))
         {
+            Debug.Log("SPPPPPPEEEEEDU : "+ car.GetComponent<Rigidbody2D>().velocity.magnitude);
             Accelerate();
+            CarSound.Instance.PlayDrivingSound();
         }
         else
         {
@@ -39,18 +46,24 @@ public class VehicleMovment : MonoBehaviour
         }
         if (Input.GetKey("s"))
         {
+          //  CarSound.Instance.PlayCarBreakSound();
+
             Reverse();
         }
         if (Input.GetKey("d"))
         {
+            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed) CarSound.Instance.PlayCarDriftingSound();
             car.rotation += -TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
         if (Input.GetKey("a"))
         {
+            if(car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed) CarSound.Instance.PlayCarDriftingSound();
+
             car.rotation += TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
+  
         //Radio code
         if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
@@ -79,6 +92,16 @@ public class VehicleMovment : MonoBehaviour
             }
         }
     }
+
+    private void checkIdleCar()
+    {
+        if(car.GetComponent<Rigidbody2D>().velocity.magnitude < CarIdle)
+        {
+            CarSound.Instance.PlayIdleCarSound();
+        }
+            
+    }
+
     /// <summary>
     /// Adds force equal to the Acceleration to the vehicle if the current velocity is less than the MaxSpeed
     /// </summary>
@@ -95,6 +118,7 @@ public class VehicleMovment : MonoBehaviour
     public void Reverse()
     {
         car.AddForce(-transform.up * Acceleration * 0.7f);
+        CarSound.Instance.PlayCarBreakSound();
     }
     /// <summary>
     /// Slows down the vehicle if the player does not accelerate
@@ -109,6 +133,8 @@ public class VehicleMovment : MonoBehaviour
         if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
         {           
             OnEnterVehicle(collision);
+            CarSound.Instance.PlayIdleCarSound();
+
         }
     }
 
@@ -122,5 +148,4 @@ public class VehicleMovment : MonoBehaviour
         collision.transform.parent = this.gameObject.transform;
         vehicleScript.enabled = true; 
     }
-
 }
