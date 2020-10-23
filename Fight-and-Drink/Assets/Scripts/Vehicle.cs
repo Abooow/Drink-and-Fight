@@ -7,9 +7,6 @@ using UnityEngine;
 /// </summary>
 public class Vehicle : MonoBehaviour
 {
-    public float MaxVelocity;
-    public float Acceleration;
-    public float Weight;
     private bool inVehicle = false;
     private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
@@ -57,20 +54,6 @@ public class Vehicle : MonoBehaviour
             }
         }
    
-    }
-
-    /// <summary>
-    /// function for accelerating the car
-    /// </summary>
-    virtual protected void Accelerate()
-    {
-    }
-
-    /// <summary>
-    /// function for slowing down the car
-    /// </summary>
-    virtual protected void Brake()
-    {
     }
 
     /// <summary>

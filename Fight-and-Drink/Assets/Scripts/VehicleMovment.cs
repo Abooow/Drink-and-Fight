@@ -63,34 +63,8 @@ public class VehicleMovment : MonoBehaviour
             car.rotation += TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
-  
-        //Radio code
-        if (inVehicle && Input.GetKeyDown(KeyCode.E))
-        {
-            vehicleScript.enabled = false;
-            player.SetActive(true);
-            player.transform.parent = null;
-            inVehicle = false;
-            player.transform.position = this.gameObject.transform.position;
-            Radio.Instance.Pause();
-        }
-        if (inVehicle && Input.GetKeyDown(KeyCode.F1))
-        {
-            Radio.Instance.NextChannel();
-        }
-        if (inVehicle && Input.GetKeyDown(KeyCode.F4))
-        {
-            if (!pauseRadio)
-            {
-                Radio.Instance.Pause();
-                pauseRadio = true;
-            }
-            else if (pauseRadio)
-            {
-                Radio.Instance.Resume();
-                pauseRadio = false;
-            }
-        }
+
+
     }
 
     private void checkIdleCar()
@@ -127,25 +101,5 @@ public class VehicleMovment : MonoBehaviour
     {
         car.velocity = car.velocity * 0.95f;
     }
-     private void OnTriggerStay2D(Collider2D collision)
-    {
 
-        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
-        {           
-            OnEnterVehicle(collision);
-            CarSound.Instance.PlayIdleCarSound();
-
-        }
-    }
-
-    private void OnEnterVehicle(Collider2D collision)
-    {
-        Radio.Instance.Resume();
-        inVehicle = true;
-        player = collision.gameObject;
-        Debug.Log("boom");
-        collision.gameObject.SetActive(false);
-        collision.transform.parent = this.gameObject.transform;
-        vehicleScript.enabled = true; 
-    }
 }
