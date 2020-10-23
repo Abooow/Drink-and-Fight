@@ -11,6 +11,7 @@ public class Vehicle : MonoBehaviour
     private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
     private GameObject player;
+    AudioSource audiosource;
 
     /// <summary>
     /// Called before the first frame update
@@ -20,6 +21,7 @@ public class Vehicle : MonoBehaviour
         vehicleScript = GetComponent<VehicleMovment>();
         
         vehicleScript.enabled = false;
+        
     }
 
     /// <summary>
@@ -29,6 +31,7 @@ public class Vehicle : MonoBehaviour
     {
         if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
+
             vehicleScript.enabled = false;
             player.SetActive(true);
             player.transform.parent = null;
@@ -78,6 +81,7 @@ public class Vehicle : MonoBehaviour
     private void OnEnterVehicle(Collider2D collision)
     {
         Radio.Instance.Resume();
+        Debug.Log(Radio.Instance.AudioSource);
         inVehicle = true;
         player = collision.gameObject;
         Debug.Log("boom");

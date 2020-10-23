@@ -13,6 +13,7 @@ public class CarSound : MonoBehaviour
     bool isCarIdlePlaying;
     bool isCarBreakPlaying;
     bool isCarDriftingPlaying;
+    bool isCarAcceleratingPlaying;
 
 
 
@@ -30,7 +31,6 @@ public class CarSound : MonoBehaviour
     {
         if (!AudioSource.isPlaying && isCarDrivingPlaying || isCarIdlePlaying || isCarDriftingPlaying)
         {
-            Debug.Log("updates");
             AudioSource.Play();
         }
     }
@@ -42,7 +42,6 @@ public class CarSound : MonoBehaviour
             isCarBreakPlaying = false;
             isCarIdlePlaying = false;
             
-        Debug.Log("DRIVING");
             AudioSource.clip = CarSounds[0];
             isCarDrivingPlaying = true;
         }
@@ -55,7 +54,6 @@ public class CarSound : MonoBehaviour
             isCarBreakPlaying = false;
             isCarDrivingPlaying = false;
             isCarDriftingPlaying = false;
-            Debug.Log("IDLE");
             isCarIdlePlaying = true;
             AudioSource.clip = CarSounds[1];
         }
@@ -69,7 +67,6 @@ public class CarSound : MonoBehaviour
             isCarDrivingPlaying = false;
             isCarIdlePlaying = false;
             isCarDrivingPlaying = false;
-            Debug.Log("BREAK");
             if (!isCarBreakPlaying)
             {
             AudioSource.clip = CarSounds[2];
@@ -88,6 +85,17 @@ public class CarSound : MonoBehaviour
                 isCarIdlePlaying = false;
                 AudioSource.clip = CarSounds[3];
                 isCarDriftingPlaying = true;
+        }
+    }
+
+    public void PlayCarAccelerateSound()
+    {
+        if (CarSounds.Count > 0 && !isCarAcceleratingPlaying)
+        {
+            isCarDrivingPlaying = false;
+            isCarIdlePlaying = false;
+            AudioSource.clip = CarSounds[4];
+            isCarAcceleratingPlaying = true;
         }
     }
 }
