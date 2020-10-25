@@ -14,7 +14,7 @@ public class WeaponManager : MonoBehaviour
     public int TotalWeapons => weapons.Count;
 
     private List<GameObject> weapons = new List<GameObject>();
-    private int weaponIndex;
+    private int weaponIndex = -1;
 
     /// <summary>
     /// Adds a weapon to the weapon list, if the weapon already exists, then the ammo from the newWeaponObj will be added onto the existing weapon.
@@ -132,10 +132,30 @@ public class WeaponManager : MonoBehaviour
         CurrentWeapon = weapons[weaponIndex];
         SetWeaponActive(true);
 
+        EnableCorrectWeaponController();
+
         if (lastIndex != weaponIndex)
         {
             if (OnWeaponChanged != null && CurrentWeapon.TryGetComponent<IWeapon>(out IWeapon newWeapon))
                 OnWeaponChanged.Invoke(newWeapon);
+        }
+    }
+
+    private void EnableCorrectWeaponController()
+    {
+        if (CurrentWeapon.transform.parent.tag == "Player")
+        {
+            if (CurrentWeapon.TryGetComponent(out PlayerWeaponController playerController))
+                playerController.enabled = true;
+            if (CurrentWeapon.TryGetComponent(out NpcWeaponController npcController))
+                npcController.enabled = false;
+        }
+        else
+        {
+            if (CurrentWeapon.TryGetComponent(out PlayerWeaponController playerController))
+                playerController.enabled = false;
+            if (CurrentWeapon.TryGetComponent(out NpcWeaponController npcController))
+                npcController.enabled = true;
         }
     }
 }

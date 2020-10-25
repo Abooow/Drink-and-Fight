@@ -481,17 +481,21 @@ GameObject:
   - component: {fileID: 54272267}
   - component: {fileID: 54272266}
   - component: {fileID: 54272265}
-  - component: {fileID: 54272264}
   - component: {fileID: 54272268}
   - component: {fileID: 54272269}
+  - component: {fileID: 54272264}
   - component: {fileID: 54272270}
   - component: {fileID: 54272274}
+  - component: {fileID: 54272277}
+  - component: {fileID: 54272276}
+  - component: {fileID: 54272275}
+  - component: {fileID: 54272278}
   - component: {fileID: 54272273}
   - component: {fileID: 54272272}
   - component: {fileID: 54272271}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -961,6 +965,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0672d3c21c0f6d14193d6b3ea7b79b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &54272275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d079671e7b291147be69b4154ecaffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentWeapon: {fileID: 0}
+--- !u!114 &54272276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb6cfec64d4f564c98050b6d0a72977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 100
+  Armor: 0
+  IsDead: 0
+  Strength: 0
+--- !u!114 &54272277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5ee82f5c738414d87fbf5929209a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterStats: {fileID: 54272276}
+--- !u!114 &54272278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b145a07b58805204cabc4edb987bbe80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerWeaponManager: {fileID: 54272275}
 --- !u!4 &66338378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2898982034749547437, guid: 6398067a0c6f3c34d93c3c2f3520be4d,
@@ -12591,6 +12651,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1554132150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554132152}
+  - component: {fileID: 1554132151}
+  m_Layer: 0
+  m_Name: Factories
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1554132151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554132150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26760c7c629c1948a3e097379238c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - {fileID: 8576570976624384268, guid: f520f71e77a948f4bbb894c6053a0a38, type: 3}
+  - {fileID: 8576570976624384268, guid: 71e4b19ba8c9dfa4c98c7d2af5eaf2d3, type: 3}
+  - {fileID: 8576570976624384268, guid: 45ae59826c6edea4092cfbc1ca3a5449, type: 3}
+--- !u!4 &1554132152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554132150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1359444611
 PrefabInstance:
   m_ObjectHideFlags: 0
