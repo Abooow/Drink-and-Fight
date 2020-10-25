@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void WeaponEvent(IWeapon weapon);
+
 /// <summary>
 /// Managers all the weapons a character can hold.
 /// </summary>
 public class WeaponManager : MonoBehaviour
 {
     public GameObject CurrentWeapon;
+    public event WeaponEvent OnWeaponChanged;
 
     public int TotalWeapons => weapons.Count;
 
