@@ -11,8 +11,13 @@ public class UIWeapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WeaponManager.OnWeaponChanged += OnWeaponChanged;
-       
+         WeaponManager.OnWeaponChanged += OnWeaponChanged;
+
+        if(WeaponManager.CurrentWeapon == null)
+        {
+            WeaponImage.sprite = Weapons[0].Value;
+        }
+    
     }
 
     // Update is called once per frame
@@ -24,15 +29,20 @@ public class UIWeapon : MonoBehaviour
 
     private void OnWeaponChanged(IWeapon weapon)
     {
-        WeaponImage = GetComponent<Image>();
 
-        if (weapon.Name == null)
+        if (weapon == null)
         {
             WeaponImage.sprite = Weapons[0].Value;
         }
-        if (weapon.Name == Weapons[1].Key)
+
+
+        for (int i = 0; i < Weapons.Count; i++)
         {
-            WeaponImage.sprite = Weapons[1].Value;
+            if (weapon.Name == Weapons[i].Key)
+            {
+                WeaponImage.sprite = Weapons[i].Value;
+                break;
+            }
         }
 
     }

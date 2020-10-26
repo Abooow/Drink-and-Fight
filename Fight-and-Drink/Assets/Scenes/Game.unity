@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 54272273}
   - component: {fileID: 54272272}
   - component: {fileID: 54272271}
+  - component: {fileID: 54272275}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -609,6 +610,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0672d3c21c0f6d14193d6b3ea7b79b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &54272275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54272263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d079671e7b291147be69b4154ecaffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentWeapon: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a14f749c32fc847963cb21e76376bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponManager: {fileID: 0}
+  WeaponManager: {fileID: 54272275}
   WeaponImage: {fileID: 783438372}
   Weapons:
   - Key: punch
