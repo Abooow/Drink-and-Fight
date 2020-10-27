@@ -9,7 +9,6 @@ public class GivePlayerWeapons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Punch"));
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 1"));
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 2"));
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 3"));

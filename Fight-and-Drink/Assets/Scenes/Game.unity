@@ -8366,7 +8366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.700012, y: -9.200012}
+  m_AnchoredPosition: {x: 17.7, y: -9.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &783438371
@@ -8384,7 +8384,7 @@ MonoBehaviour:
   WeaponManager: {fileID: 54272275}
   WeaponImage: {fileID: 783438372}
   Weapons:
-  - Key: Punch
+  - Key: punch
     Value: {fileID: 21300000, guid: b6d3bc9812193b442926c5cb7790eead, type: 3}
   - Key: Gun 1
     Value: {fileID: 21300000, guid: fccfbe0cc87f86740badca094cf6e747, type: 3}
@@ -14640,7 +14640,6 @@ MonoBehaviour:
   - {fileID: 8576570976624384268, guid: 71e4b19ba8c9dfa4c98c7d2af5eaf2d3, type: 3}
   - {fileID: 8576570976624384268, guid: 45ae59826c6edea4092cfbc1ca3a5449, type: 3}
   - {fileID: 8576570976624384268, guid: b163a28006de1e04a82504a7226f49f4, type: 3}
-  - {fileID: 8576570976624384268, guid: 04ec31a91159a5242925a70cc5a43086, type: 3}
 --- !u!4 &1554132152
 Transform:
   m_ObjectHideFlags: 0
