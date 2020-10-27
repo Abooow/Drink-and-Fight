@@ -97,7 +97,7 @@ public class WeaponManager : MonoBehaviour
     /// </summary>
     public void NextWeapon()
     {
-        SetWeapon(++weaponIndex);
+        SetWeapon(weaponIndex + 1);
     }
 
     /// <summary>
@@ -105,7 +105,7 @@ public class WeaponManager : MonoBehaviour
     /// </summary>
     public void PreviousWeapon()
     {
-        SetWeapon(--weaponIndex);
+        SetWeapon(weaponIndex - 1);
     }
 
     /// <summary>

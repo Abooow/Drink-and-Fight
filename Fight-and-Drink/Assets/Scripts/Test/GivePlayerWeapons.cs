@@ -12,6 +12,7 @@ public class GivePlayerWeapons : MonoBehaviour
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 1"));
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 2"));
         PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 3"));
+        PlayerWeaponManager.AddWeapon(WeaponFactory.GetWeapon("Gun 4"));
     }
 
     // Update is called once per frame

@@ -29,7 +29,6 @@ public class UIWeapon : MonoBehaviour
 
     private void OnWeaponChanged(IWeapon weapon)
     {
-
         if (weapon == null)
         {
             WeaponImage.sprite = Weapons[0].Value;
