@@ -27,7 +27,7 @@ public class UIWeapon : MonoBehaviour
 
     }
 
-    private void OnWeaponChanged(IWeapon weapon)
+    private void OnWeaponChanged(IWeapon weapon, System.EventArgs args)
     {
         if (weapon == null)
         {

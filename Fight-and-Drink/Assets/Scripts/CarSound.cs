@@ -20,7 +20,7 @@ public class CarSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!AudioSource.isPlaying && GetComponent<Vehicle>().inVehicle)
+        if (!AudioSource.isPlaying && GetComponent<Vehicle>().IsInVehicle)
         {
             AudioSource.Play();
         }
