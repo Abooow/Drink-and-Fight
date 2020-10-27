@@ -87,7 +87,7 @@ MonoBehaviour:
   Damage: 100
   _name: Gun 3
   _description: 
-  _orderIndex: 3
+  _orderIndex: 2
   _fireRate: 1
   _canAttack: 0
   _drawGizmos: 1
