@@ -9,11 +9,9 @@ public class VehicleMovment : MonoBehaviour
     public float Acceleration;
     public float TurningRate;
     public Rigidbody2D car;
-    private bool inVehicle = false;
-    private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
     private GameObject player;
-    public float CarIdle= 0.1f;
+    public float CarIdle= 0.01f;
     public float CarDriftingSpeed = 0.8f;
 
     /// <summary>
@@ -22,7 +20,6 @@ public class VehicleMovment : MonoBehaviour
     public void Start()
     {
         vehicleScript = GetComponent<VehicleMovment>();
-
         vehicleScript.enabled = false;
     }
 
@@ -31,17 +28,17 @@ public class VehicleMovment : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        //Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
         checkIdleCar();
         //Checks the input to drive accordingly
         if (Input.GetKey("w"))
         {
+            Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
             Accelerate();
-            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 10 && Input.GetKey("w"))
+            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 8.7 && Input.GetKey("w"))
             {
                 CarSound.Instance?.PlayDrivingSound();
             }
-            else if (car.GetComponent<Rigidbody2D>().velocity.magnitude < 10 && Input.GetKey("w"))
+            else if (car.GetComponent<Rigidbody2D>().velocity.magnitude < 8.7 && Input.GetKey("w"))
             {
                 CarSound.Instance?.PlayCarAccelerateSound();
             }
@@ -50,18 +47,15 @@ public class VehicleMovment : MonoBehaviour
         {
             Brake();
         }
-        if (Input.GetKeyUp("w")&& car.GetComponent<Rigidbody2D>().velocity.magnitude > 5)
+        if (Input.GetKeyUp("w") && car.GetComponent<Rigidbody2D>().velocity.magnitude > 4)
         {
             CarSound.Instance?.PlayCarSlowdownSound();
         }
-        if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 0.1)
-        {
-            // CarSound.Instance?.PlayIdleCarSound();
-        }
         if (Input.GetKey("s"))
         {
-            CarSound.Instance.PlayCarBreakSound();
-            Reverse();
+            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 3) { CarSound.Instance.PlayCarBreakSound(); Brake(); }
+            else { Reverse(); CarSound.Instance.PlayCarAccelerateSound(); }
+          
         }
         if (Input.GetKey("d"))
         {
@@ -77,6 +71,9 @@ public class VehicleMovment : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if car is not moving
+    /// </summary>
     private void checkIdleCar()
     {
         if(car?.GetComponent<Rigidbody2D>().velocity.magnitude < CarIdle)
@@ -102,7 +99,6 @@ public class VehicleMovment : MonoBehaviour
     public void Reverse()
     {
         car.AddForce(-transform.up * Acceleration * 0.7f);
-       // CarSound.Instance?.PlayCarBreakSound();
     }
 
     /// <summary>
@@ -110,7 +106,6 @@ public class VehicleMovment : MonoBehaviour
     /// </summary>
     public void Brake()
     {
-        //CarSound.Instance?.PlayCarSlowdownSound();
         car.velocity = car.velocity * 0.95f;
     }
 
