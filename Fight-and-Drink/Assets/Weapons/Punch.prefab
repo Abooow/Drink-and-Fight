@@ -39,12 +39,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8178235451038233867}
-  - component: {fileID: 4876488803702272698}
   - component: {fileID: 7620533663885764963}
-  - component: {fileID: 9171933584092622972}
-  - component: {fileID: 1901240539987605586}
+  - component: {fileID: -4565827535477724815}
+  - component: {fileID: 665082094744831711}
+  - component: {fileID: 3550622751181337728}
   m_Layer: 0
-  m_Name: Gun 1
+  m_Name: Punch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,38 +59,12 @@ Transform:
   m_GameObject: {fileID: 8576570976624384268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.199, y: 0.091, z: 0}
-  m_LocalScale: {x: 0.6307822, y: 2.5384204, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7087799993603283859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4876488803702272698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8576570976624384268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe8140c0f343a34e9b32bfe4671b16b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponMuzzle: {fileID: 7087799993603283859}
-  MaxBulletDistance: 7
-  MagazineCapacity: 10
-  CurrentBullets: 10
-  TotalBullets: 100
-  ReloadSpeed: 0.3
-  BulletSpread: 3
-  Damage: 10
-  _name: Gun 1
-  _description: 
-  _orderIndex: 0
-  _fireRate: 0.3
-  _canAttack: 0
-  _drawGizmos: 1
 --- !u!212 &7620533663885764963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,9 +103,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7888296697152109952, guid: 8c494b89ac89728458d5f25338d1151f,
+  m_Sprite: {fileID: 6757282713640645180, guid: 2f36e182a30771d45ad5f1b77569b487,
     type: 3}
-  m_Color: {r: 0.07042839, g: 0.06941973, b: 0.0754717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,7 +115,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9171933584092622972
+--- !u!114 &-4565827535477724815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,10 +124,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8576570976624384268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bb80b3a0fb0b584da26108268db617e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b827f294ec368347a03e71e86ed1da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1901240539987605586
+  _name: Punch
+  _description: Hand
+  _orderIndex: 4
+  _fireRate: 0
+  _canAttack: 0
+--- !u!114 &665082094744831711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +141,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 8576570976624384268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b675884fb3bed6b4799e0cdacd5583dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 486d20d71c3ce6e479cea685768efb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3550622751181337728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576570976624384268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6900a8bd6d91ae94cb32f8dd36933d9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
