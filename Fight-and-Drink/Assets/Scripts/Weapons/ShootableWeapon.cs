@@ -44,6 +44,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     private void Start()
     {
         _canAttack = true;
+        ReloadSpeed = 2.1f;
     }
 
     /// <summary>
@@ -51,6 +52,8 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     /// </summary>
     private void Update()
     {
+
+
         if (!_canAttack)
         {
             if (!isReloading)
@@ -103,6 +106,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
             Reload();
             return;
         }
+
 
         float offset = Random.Range(-BulletSpread, BulletSpread) + RotationOffset;
         float startAngle = transform.eulerAngles.z;
