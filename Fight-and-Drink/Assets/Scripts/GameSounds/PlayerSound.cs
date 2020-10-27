@@ -1,6 +1,9 @@
 ﻿using Random = System.Random;
 using UnityEngine;
 
+/// <summary>
+/// Controls all the sounds from the player object
+/// </summary>
 public class PlayerSound : MonoBehaviour
 {
     CharacterMover cm;
@@ -9,8 +12,10 @@ public class PlayerSound : MonoBehaviour
     AudioSource Run;
     AudioSource Standing;
     Random rnd;
-    
-    // Start is called before the first frame update
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
     void Start()
     {
         cm = GetComponent<CharacterMover>();
@@ -18,19 +23,28 @@ public class PlayerSound : MonoBehaviour
         rnd = new Random();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame.
+    /// </summary>
     void Update()
     {
         GetSounds();
         UpdateSound();
     }
 
+    /// <summary>
+    /// Fetch all the sounds that player object contains
+    /// </summary>
     void GetSounds()
     {
         Walk = audios[0];
         Run = audios[1];
         Standing = audios[2];
     }
+
+    /// <summary>
+    /// Updates player object sound depending on state
+    /// </summary>
     void UpdateSound()
     {
         if (cm.MovingState == MovingState.Walking && Walk.isPlaying == false) { Walk.Play(); }
