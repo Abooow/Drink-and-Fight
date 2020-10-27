@@ -127,11 +127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b827f294ec368347a03e71e86ed1da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponMuzzle: {fileID: 7087799993603283859}
+  MaxBulletDistance: 2
+  Damage: 10
   _name: Punch
   _description: Hand
   _orderIndex: 4
-  _fireRate: 0
+  _fireRate: 1
   _canAttack: 0
+  _drawGizmos: 1
 --- !u!114 &665082094744831711
 MonoBehaviour:
   m_ObjectHideFlags: 0

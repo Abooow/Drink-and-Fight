@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 431054}
   - component: {fileID: 3387112}
   - component: {fileID: 2307780}
+  - component: {fileID: 2077402610222454845}
+  - component: {fileID: 5683848301931836024}
+  - component: {fileID: 6072570716958240284}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -78,6 +81,54 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!58 &2077402610222454845
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000003689964, y: 1.8414998}
+  serializedVersion: 2
+  m_Radius: 0.32
+--- !u!58 &5683848301931836024
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0002599513, y: -4358.1157}
+  serializedVersion: 2
+  m_Radius: 0.36417842
+--- !u!58 &6072570716958240284
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0002648039, y: 4444.5293}
+  serializedVersion: 2
+  m_Radius: 0.3730641
 --- !u!1 &150262
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +138,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 416204}
-  - component: {fileID: 6530754}
   m_Layer: 0
   m_Name: painted_wall_barrier
   m_TagString: Untagged
@@ -110,16 +160,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6530754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150262}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.71399087, y: 3.691543, z: 1.7056261}
-  m_Center: {x: -0.00060100533, y: 1.8455007, z: -0.0000021124142}

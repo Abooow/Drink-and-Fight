@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5057963709092296143}
   - component: {fileID: 5057963709076820431}
   - component: {fileID: 5057963709075690255}
+  - component: {fileID: 5266631247630738847}
   m_Layer: 0
   m_Name: danpungMix
   m_TagString: Untagged
@@ -89,3 +90,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!58 &5266631247630738847
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057963709077687759}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4276314, y: 14.220289}
+  serializedVersion: 2
+  m_Radius: 3.28

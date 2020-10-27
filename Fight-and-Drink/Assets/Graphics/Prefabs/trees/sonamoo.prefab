@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9079650097847346910}
   - component: {fileID: 9079650097831871198}
   - component: {fileID: 9079650097830903838}
+  - component: {fileID: 2224034485171409918}
   m_Layer: 0
   m_Name: sonamoo
   m_TagString: Untagged
@@ -89,3 +90,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!58 &2224034485171409918
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079650097833172702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: 11.292435}
+  serializedVersion: 2
+  m_Radius: 1.5
