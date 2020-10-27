@@ -7,6 +7,9 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
 {
     public static int RotationOffset = 90;
 
+    public event WeaponEvent OnWeaponFired;
+    public event WeaponEvent OnWeaponReload;
+
     public string Name { get => _name; set => _name = value; }
     public string Description { get => _description; set => _description = value; }
     public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
@@ -112,6 +115,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
         }
 
+        OnWeaponFired?.Invoke(this, new ShotEvent(rayDir));
         _canAttack = false;
         CurrentBullets--;
         if (CurrentBullets <= 0) Reload();
@@ -124,6 +128,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     {
         if (TotalBullets <= 0) return;
 
+        OnWeaponReload?.Invoke(this, null);
         _canAttack = false;
         isReloading = true;
     }

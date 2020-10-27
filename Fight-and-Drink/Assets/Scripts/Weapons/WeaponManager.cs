@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-
-public delegate void WeaponEvent(IWeapon weapon);
 
 /// <summary>
 /// Managers all the weapons a character can hold.
@@ -137,7 +136,7 @@ public class WeaponManager : MonoBehaviour
         if (lastIndex != weaponIndex)
         {
             if (OnWeaponChanged != null && CurrentWeapon.TryGetComponent<IWeapon>(out IWeapon newWeapon))
-                OnWeaponChanged.Invoke(newWeapon);
+                OnWeaponChanged.Invoke(newWeapon, null);
         }
     }
 

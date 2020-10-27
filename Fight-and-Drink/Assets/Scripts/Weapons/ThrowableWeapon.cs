@@ -5,6 +5,8 @@
 /// </summary>
 public class ThrowableWeapon : MonoBehaviour, IWeapon
 {
+    public event WeaponEvent OnObjectThrown;
+
     public string Name { get => _name; set => _name = value; }
     public string Description { get => _description; set => _description = value; }
     public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
@@ -66,12 +68,14 @@ public class ThrowableWeapon : MonoBehaviour, IWeapon
 
         if (distance > MaxThrowDistance) distance = MaxThrowDistance;
 
-        GameObject gameObject = Instantiate(ThrowObject, transform.position, transform.rotation);
-        if (gameObject.TryGetComponent(typeof(IThrowableObject),  out _))
+        GameObject gameObj = Instantiate(ThrowObject, transform.position, transform.rotation);
+        if (gameObj.TryGetComponent(typeof(IThrowableObject),  out _))
         {
-            if (gameObject.TryGetComponent(out Rigidbody2D rigidbody)) rigidbody.AddForce(transform.forward * distance);
+            if (gameObj.TryGetComponent(out Rigidbody2D rigidbody)) rigidbody.AddForce(transform.forward * distance);
         }
-        else DestroyImmediate(gameObject);
+        else DestroyImmediate(gameObj);
+
+        OnObjectThrown?.Invoke(this, new ThrownEvent(transform.forward, distance, ThrowObject));
     }
 
     [System.Obsolete("Use Shoot() instead")]
