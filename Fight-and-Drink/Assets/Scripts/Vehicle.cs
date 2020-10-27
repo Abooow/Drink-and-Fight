@@ -31,13 +31,14 @@ public class Vehicle : MonoBehaviour
     {
         if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
+            Radio.Instance.Pause();
+            CameraTargetFocus.Instance.Target = player.transform;
 
             vehicleScript.enabled = false;
             player.SetActive(true);
             player.transform.parent = null;
             inVehicle = false;
             player.transform.position = this.gameObject.transform.position;
-            Radio.Instance.Pause();
         }
          if(inVehicle && Input.GetKeyDown(KeyCode.F1)) 
         {
@@ -81,10 +82,10 @@ public class Vehicle : MonoBehaviour
     private void OnEnterVehicle(Collider2D collision)
     {
         Radio.Instance.Resume();
-        Debug.Log(Radio.Instance.AudioSource);
+        CameraTargetFocus.Instance.Target = transform;
+
         inVehicle = true;
         player = collision.gameObject;
-        Debug.Log("boom");
         collision.gameObject.SetActive(false);
         collision.transform.parent = this.gameObject.transform;
         vehicleScript.enabled = true; 

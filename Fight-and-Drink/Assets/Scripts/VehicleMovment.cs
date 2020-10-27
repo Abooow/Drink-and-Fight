@@ -36,7 +36,6 @@ public class VehicleMovment : MonoBehaviour
         //Checks the input to drive accordingly
         if(Input.GetKey("w"))
         {
-            Debug.Log("SPPPPPPEEEEEDU : "+ car.GetComponent<Rigidbody2D>().velocity.magnitude);
             Accelerate();
             CarSound.Instance?.PlayDrivingSound();
         }
