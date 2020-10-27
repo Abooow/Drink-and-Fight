@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class CarSound : MonoBehaviour
@@ -14,7 +15,6 @@ public class CarSound : MonoBehaviour
     void Start()
     {
         Instance = this;
-       // CarSounds = new List<AudioClip>();
     }
 
     // Update is called once per frame
@@ -26,32 +26,45 @@ public class CarSound : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays the cars engine while driving higher speed
+    /// </summary>
     public void PlayDrivingSound()
     {
-        if (CarSounds.Count > 0 )
+
+        if (CarSounds.Count > 0)
         {
             AudioSource.clip = CarSounds[0];
         }
     }
 
+    /// <summary>
+    /// PLay car engine not pushing W. Idle condition
+    /// </summary>
     public void PlayIdleCarSound()
     {
-
-        if (CarSounds.Count > 0 )
+       
+        if (CarSounds.Count > 0)
         {
-            AudioSource.clip = CarSounds[2];
+                AudioSource.clip = CarSounds[2];
         }
     }
 
+    /// <summary>
+    /// Plays car using breaks
+    /// </summary>
     public void PlayCarBreakSound()
     {
 
-        if (CarSounds.Count > 0 )
+        if (CarSounds.Count > 0)
         {
             AudioSource.clip = CarSounds[4];
         }
     }
 
+    /// <summary>
+    /// Plays car drifting around sound
+    /// </summary>
     public void PlayCarDriftingSound()
     {
 
@@ -61,6 +74,9 @@ public class CarSound : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays car accelerating
+    /// </summary>
     public void PlayCarAccelerateSound()
     {
         if (CarSounds.Count > 0 )
@@ -69,6 +85,9 @@ public class CarSound : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays cvar engine slowing down
+    /// </summary>
     public void PlayCarSlowdownSound()
     {
         if (CarSounds.Count > 0)
@@ -77,11 +96,15 @@ public class CarSound : MonoBehaviour
         }
     }
 
-    public void PlayCarOpenDoor()
+    /// <summary>
+    /// plays car door sound
+    /// </summary>
+    public void PlayCarDoor()
     {
-        if (CarSounds.Count > 0)
+        if (CarSounds.Count > 0 )
         {
             AudioSource.clip = CarSounds[6];
+            AudioSource.Play();
         }
     }
 }

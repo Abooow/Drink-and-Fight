@@ -31,7 +31,7 @@ public class Vehicle : MonoBehaviour
     {
         if (inVehicle && Input.GetKeyDown(KeyCode.E))
         {
-            CarSound.Instance.PlayCarOpenDoor();
+            CarSound.Instance.PlayCarDoor();
             vehicleScript.enabled = false;
             player.SetActive(true);
             player.transform.parent = null;
@@ -81,7 +81,7 @@ public class Vehicle : MonoBehaviour
     {
         Radio.Instance.Resume();
         inVehicle = true;
-        CarSound.Instance.PlayCarOpenDoor();
+        CarSound.Instance.PlayCarDoor();
         player = collision.gameObject;
         collision.gameObject.SetActive(false);
         collision.transform.parent = this.gameObject.transform;

@@ -31,10 +31,10 @@ public class VehicleMovment : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
+        //Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
         checkIdleCar();
         //Checks the input to drive accordingly
-        if (Input.GetKey("w") )
+        if (Input.GetKey("w"))
         {
             Accelerate();
             if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 10 && Input.GetKey("w"))
