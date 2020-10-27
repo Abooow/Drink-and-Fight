@@ -33,6 +33,7 @@ public class UIWeapon : MonoBehaviour
         if (weapon == null)
         {
             WeaponImage.sprite = Weapons[0].Value;
+            return;
         }
 
 
