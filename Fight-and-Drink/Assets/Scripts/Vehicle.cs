@@ -7,7 +7,6 @@ using UnityEngine;
 /// </summary>
 public class Vehicle : MonoBehaviour
 {
-    private bool inVehicle = false;
     private bool pauseRadio = false;
     private VehicleMovment vehicleScript;
     private GameObject player;
@@ -34,6 +33,7 @@ public class Vehicle : MonoBehaviour
             Radio.Instance.Pause();
             CameraTargetFocus.Instance.Target = player.transform;
 
+            CarSound.Instance.PlayCarDoor();
             vehicleScript.enabled = false;
             player.SetActive(true);
             player.transform.parent = null;
@@ -67,7 +67,6 @@ public class Vehicle : MonoBehaviour
     /// In this case Player</param>
     private void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.F) && inVehicle == false)
         {           
             OnEnterVehicle(collision);
@@ -85,9 +84,10 @@ public class Vehicle : MonoBehaviour
         CameraTargetFocus.Instance.Target = transform;
 
         inVehicle = true;
+        CarSound.Instance.PlayCarDoor();
         player = collision.gameObject;
         collision.gameObject.SetActive(false);
         collision.transform.parent = this.gameObject.transform;
-        vehicleScript.enabled = true; 
+        vehicleScript.enabled = true;
     }
 }

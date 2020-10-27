@@ -31,39 +31,50 @@ public class VehicleMovment : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-
+        //Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
         checkIdleCar();
         //Checks the input to drive accordingly
-        if(Input.GetKey("w"))
+        if (Input.GetKey("w"))
         {
             Accelerate();
-            CarSound.Instance?.PlayDrivingSound();
+            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 10 && Input.GetKey("w"))
+            {
+                CarSound.Instance?.PlayDrivingSound();
+            }
+            else if (car.GetComponent<Rigidbody2D>().velocity.magnitude < 10 && Input.GetKey("w"))
+            {
+                CarSound.Instance?.PlayCarAccelerateSound();
+            }
         }
         else
         {
             Brake();
         }
+        if (Input.GetKeyUp("w")&& car.GetComponent<Rigidbody2D>().velocity.magnitude > 5)
+        {
+            CarSound.Instance?.PlayCarSlowdownSound();
+        }
+        if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 0.1)
+        {
+            // CarSound.Instance?.PlayIdleCarSound();
+        }
         if (Input.GetKey("s"))
         {
-          //  CarSound.Instance.PlayCarBreakSound();
-
+            CarSound.Instance.PlayCarBreakSound();
             Reverse();
         }
         if (Input.GetKey("d"))
         {
-            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed) CarSound.Instance?.PlayCarDriftingSound();
+            if (car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed)// CarSound.Instance?.PlayCarDriftingSound();
             car.rotation += -TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
         if (Input.GetKey("a"))
         {
-            if(car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed) CarSound.Instance?.PlayCarDriftingSound();
-
+            if(car.GetComponent<Rigidbody2D>().velocity.magnitude > CarDriftingSpeed) //CarSound.Instance?.PlayCarDriftingSound();
             car.rotation += TurningRate;
             car.velocity = car.velocity * 0.97f;
         }
-
-
     }
 
     private void checkIdleCar()
@@ -71,8 +82,7 @@ public class VehicleMovment : MonoBehaviour
         if(car?.GetComponent<Rigidbody2D>().velocity.magnitude < CarIdle)
         {
             CarSound.Instance?.PlayIdleCarSound();
-        }
-            
+        }  
     }
 
     /// <summary>
@@ -85,19 +95,22 @@ public class VehicleMovment : MonoBehaviour
             car.AddForce(transform.up * Acceleration);
         }
     }
+
     /// <summary>
     /// Adds backwards force to the vehicle equal to the Acceleration * 0.7 
     /// </summary>
     public void Reverse()
     {
         car.AddForce(-transform.up * Acceleration * 0.7f);
-        CarSound.Instance?.PlayCarBreakSound();
+       // CarSound.Instance?.PlayCarBreakSound();
     }
+
     /// <summary>
     /// Slows down the vehicle if the player does not accelerate
     /// </summary>
     public void Brake()
     {
+        //CarSound.Instance?.PlayCarSlowdownSound();
         car.velocity = car.velocity * 0.95f;
     }
 
