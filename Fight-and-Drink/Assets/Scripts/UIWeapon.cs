@@ -6,7 +6,11 @@ public class UIWeapon : MonoBehaviour
 {
     public WeaponManager WeaponManager;
     public Image WeaponImage;
+    public Text Text;
     public List<KeyValueWeapon> Weapons;
+
+    private ShootableWeapon shootableWeapon;
+    private ThrowableWeapon throwableWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +27,18 @@ public class UIWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+        if (shootableWeapon != null)
+        {
+            Text.text = $"{shootableWeapon.CurrentBullets}/{shootableWeapon.TotalBullets}";
+        }
+        else if (throwableWeapon != null)
+        {
+            Text.text = $"{throwableWeapon.CurrentThrowables}";
+        }
+        else
+        {
+            Text.text = "";
+        }
     }
 
     private void OnWeaponChanged(IWeapon weapon, System.EventArgs args)
@@ -35,6 +49,21 @@ public class UIWeapon : MonoBehaviour
             return;
         }
 
+        if (weapon is ShootableWeapon shootable)
+        {
+            shootableWeapon = shootable;
+            throwableWeapon = null;
+        }
+        else if (weapon is ThrowableWeapon throwable)
+        {
+            shootableWeapon = null;
+            throwableWeapon = throwable;
+        }
+        else
+        {
+            shootableWeapon = null;
+            throwableWeapon = null;
+        }
 
         for (int i = 0; i < Weapons.Count; i++)
         {
