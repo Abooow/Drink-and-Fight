@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff7f0427490b704893119f2afd5e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxStamina: 70
-  CurrentStamina: 70
+  MaxStamina: 50
+  CurrentStamina: 50
   Speed: 1
   MovingState: 0
   LimpingMultiplier: 0.5
@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb6cfec64d4f564c98050b6d0a72977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  CurrentHealth: 100
+  MaxHealth: 60
+  CurrentHealth: 60
   Armor: 0
   IsDead: 0
   Strength: 0

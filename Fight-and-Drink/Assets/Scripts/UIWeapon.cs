@@ -13,15 +13,9 @@ public class UIWeapon : MonoBehaviour
     private ThrowableWeapon throwableWeapon;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
          WeaponManager.OnWeaponChanged += OnWeaponChanged;
-
-        if(WeaponManager.CurrentWeapon == null)
-        {
-            WeaponImage.sprite = Weapons[0].Value;
-        }
-    
     }
 
     // Update is called once per frame

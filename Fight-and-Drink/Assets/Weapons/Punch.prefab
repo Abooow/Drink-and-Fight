@@ -132,7 +132,7 @@ MonoBehaviour:
   Damage: 10
   _name: Punch
   _description: Hand
-  _orderIndex: 4
+  _orderIndex: 0
   _fireRate: 1
   _canAttack: 0
   _drawGizmos: 1

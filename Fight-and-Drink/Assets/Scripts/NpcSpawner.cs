@@ -37,7 +37,7 @@ public class NpcSpawner : MonoBehaviour
             do
             {
                 position = (Vector2)transform.position + Random.insideUnitCircle * 12f;
-            } while (Vector2.Distance(transform.position, position) < 9f && CanSpawnOnPosition(position));
+            } while (Vector2.Distance(transform.position, position) < 10f && CanSpawnOnPosition(position));
 
             SpawnNewPolice(position);
         }

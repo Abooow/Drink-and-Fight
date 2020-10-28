@@ -68,6 +68,9 @@ public class WeaponManager : MonoBehaviour
                     break;
                 }
             }
+
+            if (TotalWeapons == 1)
+                SetWeapon(0);
         }
     }
 

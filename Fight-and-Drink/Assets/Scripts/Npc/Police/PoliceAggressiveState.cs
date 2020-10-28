@@ -43,7 +43,7 @@ public class PoliceAggressiveState : MonoBehaviour
         if (distanceToPlayer >= MaxDistance)
             policeScript.ChangeState(PoliceState.Passive);
         
-        if (attackTimer >= 0.5f && distanceToPlayer <= MinShootDistance)
+        if (attackTimer >= 0.8f && distanceToPlayer <= MinShootDistance)
         {
             attackTimer = 0f;
             weapon.Attack();
