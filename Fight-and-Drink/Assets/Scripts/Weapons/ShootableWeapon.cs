@@ -14,7 +14,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     public bool CanAttack { get => _canAttack; set => _canAttack = value; }
     public bool DrawGizmos { get => _drawGizmos; set => _drawGizmos = value; }
 
-    public Transform WeaponMuzzle;
+    public ParticleSystem WeaponMuzzle;
     public float MaxBulletDistance;
     public int MagazineCapacity;
     public int CurrentBullets;
@@ -41,6 +41,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     private void Start()
     {
         _canAttack = true;
+        WeaponMuzzle.Stop();
     }
 
     /// <summary>
@@ -107,14 +108,19 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
         lastShotDirection = rayDir;
 
         RaycastHit2D hit;
-        if (hit = Physics2D.Raycast(WeaponMuzzle.position, rayDir, MaxBulletDistance))
+        if (hit = Physics2D.Raycast(WeaponMuzzle.transform.position, rayDir, MaxBulletDistance))
         {
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
+
+            var ObjHit = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+            ObjHit.AddForce(5 * transform.up, ForceMode2D.Impulse);
         }
 
         _canAttack = false;
         CurrentBullets--;
         if (CurrentBullets <= 0) Reload();
+
+        WeaponMuzzle.Play();
     }
 
     /// <summary>
@@ -146,7 +152,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
         {
             if (!CanAttack && !isReloading)
             {
-                Gizmos.DrawRay(WeaponMuzzle.position, lastShotDirection * MaxBulletDistance);
+                Gizmos.DrawRay(WeaponMuzzle.transform.position, lastShotDirection * MaxBulletDistance);
             }
         }
     }
