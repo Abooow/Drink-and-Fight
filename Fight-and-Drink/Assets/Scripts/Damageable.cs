@@ -40,5 +40,6 @@ public class Damageable : MonoBehaviour
     virtual protected void OnDeath()
     {
         CharacterStats.IsDead = true;
+        Destroy(gameObject);
     }
 }

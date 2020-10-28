@@ -32,7 +32,6 @@ public class VehicleMovment : MonoBehaviour
         //Checks the input to drive accordingly
         if (Input.GetKey("w"))
         {
-            Debug.Log(car.GetComponent<Rigidbody2D>().velocity.magnitude);
             Accelerate();
             if (car.GetComponent<Rigidbody2D>().velocity.magnitude > 8.7 && Input.GetKey("w"))
             {

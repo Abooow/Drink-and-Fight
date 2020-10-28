@@ -81,16 +81,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponMuzzle: {fileID: 7087799993603283859}
   MaxBulletDistance: 12
-  MagazineCapacity: 6
-  CurrentBullets: 6
-  TotalBullets: 30
-  ReloadSpeed: 1
-  BulletSpread: 0
-  Damage: 100
+  MagazineCapacity: 100
+  CurrentBullets: 100
+  TotalBullets: 600
+  ReloadSpeed: 0.2
+  BulletSpread: 1
+  Damage: 8
   _name: Gun 4
   _description: 
   _orderIndex: 3
-  _fireRate: 1
+  _fireRate: 0.2
   _canAttack: 0
   _drawGizmos: 1
 --- !u!212 &7620533663885764963
