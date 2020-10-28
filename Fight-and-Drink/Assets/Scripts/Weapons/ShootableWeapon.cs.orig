@@ -7,8 +7,8 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
 {
     public static int RotationOffset = 90;
 
-    public WeaponEvent OnWeaponFired;
-    public WeaponEvent OnWeaponReload;
+    public event WeaponEvent OnWeaponFired;
+    public event WeaponEvent OnWeaponReload;
 
     public string Name { get => _name; set => _name = value; }
     public string Description { get => _description; set => _description = value; }
@@ -18,7 +18,6 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     public bool DrawGizmos { get => _drawGizmos; set => _drawGizmos = value; }
 
     public ParticleSystem WeaponMuzzle;
-    //public Transform WeaponMuzzlePosition;
     public float MaxBulletDistance;
     public int MagazineCapacity;
     public int CurrentBullets;
@@ -45,7 +44,11 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     private void Start()
     {
         _canAttack = true;
+<<<<<<< HEAD
+        ReloadSpeed = 2.1f;
+=======
         WeaponMuzzle.Stop();
+>>>>>>> origin/186-graphics-animation-punch
     }
 
     /// <summary>
@@ -118,6 +121,12 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
         if (hit = Physics2D.Raycast(WeaponMuzzle.transform.position, rayDir, MaxBulletDistance))
         {
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
+
+            var ObjHit = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+            if(ObjHit != null)
+            {
+                ObjHit.AddForce(5 * transform.up, ForceMode2D.Impulse);
+            }
         }
 
         OnWeaponFired?.Invoke(this, new ShotEvent(rayDir));

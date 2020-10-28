@@ -26,15 +26,13 @@ public class WeaponSound : MonoBehaviour
     {
         AudioSource.clip = WeaponSounds[1];
         AudioSource.Play();
-        Debug.Log("reload");
     }
 
     private void ShootableWeapon_OnWeaponFired(IWeapon weapon, System.EventArgs args)
     {
         if (WeaponSounds.Count == 3)
         {
-             int punch = randomPunch.Next(0, 3);
-            Debug.Log("punch " + punch);
+            int punch = randomPunch.Next(0, 3);
             AudioSource.clip = WeaponSounds[punch];
             AudioSource.Play();
         }
