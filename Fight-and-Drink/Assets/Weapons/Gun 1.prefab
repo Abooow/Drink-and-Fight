@@ -86,7 +86,7 @@ MonoBehaviour:
   TotalBullets: 100
   ReloadSpeed: 0.3
   BulletSpread: 3
-  Damage: 10
+  Damage: 15
   _name: Gun 1
   _description: 
   _orderIndex: 0

@@ -85,8 +85,8 @@ MonoBehaviour:
   CurrentBullets: 20
   TotalBullets: 200
   ReloadSpeed: 0.5
-  BulletSpread: 5
-  Damage: 4
+  BulletSpread: 4
+  Damage: 10
   _name: Gun 2
   _description: 
   _orderIndex: 1
