@@ -113,7 +113,10 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
 
             var ObjHit = hit.collider.gameObject.GetComponent<Rigidbody2D>();
-            ObjHit.AddForce(5 * transform.up, ForceMode2D.Impulse);
+            if(ObjHit != null)
+            {
+                ObjHit.AddForce(5 * transform.up, ForceMode2D.Impulse);
+            }
         }
 
         _canAttack = false;

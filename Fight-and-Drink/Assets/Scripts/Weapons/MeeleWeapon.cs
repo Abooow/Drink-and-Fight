@@ -60,8 +60,11 @@ public class MeeleWeapon : MonoBehaviour, IWeapon
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
 
             var PunchedObj = hit.collider.gameObject.GetComponent<Rigidbody2D>();
-            PunchedObj.AddForce(20 * transform.up, ForceMode2D.Impulse);
-            Debug.Log(hit.collider.gameObject.name);
+            if (PunchedObj != null)
+            {
+                PunchedObj.AddForce(20 * transform.up, ForceMode2D.Impulse);
+                Debug.Log(hit.collider.gameObject.name);
+            }
         }
 
         _canAttack = false;
