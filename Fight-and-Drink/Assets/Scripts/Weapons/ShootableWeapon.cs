@@ -7,9 +7,6 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
 {
     public static int RotationOffset = 90;
 
-    public event WeaponEvent OnWeaponFired;
-    public event WeaponEvent OnWeaponReload;
-
     public string Name { get => _name; set => _name = value; }
     public string Description { get => _description; set => _description = value; }
     public int OrderIndex { get => _orderIndex; set => _orderIndex = value; }
@@ -17,7 +14,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     public bool CanAttack { get => _canAttack; set => _canAttack = value; }
     public bool DrawGizmos { get => _drawGizmos; set => _drawGizmos = value; }
 
-    public Transform WeaponMuzzle;
+    public ParticleSystem WeaponMuzzle;
     public float MaxBulletDistance;
     public int MagazineCapacity;
     public int CurrentBullets;
@@ -44,7 +41,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
     private void Start()
     {
         _canAttack = true;
-        ReloadSpeed = 2.1f;
+        WeaponMuzzle.Stop();
     }
 
     /// <summary>
@@ -114,15 +111,23 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
         lastShotDirection = rayDir;
 
         RaycastHit2D hit;
-        if (hit = Physics2D.Raycast(WeaponMuzzle.position, rayDir, MaxBulletDistance))
+        if (hit = Physics2D.Raycast(WeaponMuzzle.transform.position, rayDir, MaxBulletDistance))
         {
             if (hit.transform.gameObject.TryGetComponent(out Damageable damageable)) damageable.TakeDamage(Damage);
+
+            var ObjHit = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+            if(ObjHit != null)
+            {
+                ObjHit.AddForce(5 * transform.up, ForceMode2D.Impulse);
+            }
         }
 
         OnWeaponFired?.Invoke(this, new ShotEvent(rayDir));
         _canAttack = false;
         CurrentBullets--;
         if (CurrentBullets <= 0) Reload();
+
+        WeaponMuzzle.Play();
     }
 
     /// <summary>
@@ -155,7 +160,7 @@ public class ShootableWeapon : MonoBehaviour, IWeapon, IDrawGizmos
         {
             if (!CanAttack && !isReloading)
             {
-                Gizmos.DrawRay(WeaponMuzzle.position, lastShotDirection * MaxBulletDistance);
+                Gizmos.DrawRay(WeaponMuzzle.transform.position, lastShotDirection * MaxBulletDistance);
             }
         }
     }
