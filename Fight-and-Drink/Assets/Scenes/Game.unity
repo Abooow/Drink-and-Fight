@@ -15412,7 +15412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapons:
-  - {fileID: 8576570976624384268, guid: b163a28006de1e04a82504a7226f49f4, type: 3}
+  - {fileID: 8576570976624384268, guid: f520f71e77a948f4bbb894c6053a0a38, type: 3}
   - {fileID: 8576570976624384268, guid: bb8881f9f05dd55459ac4fd9c9fa9c35, type: 3}
   - {fileID: 8576570976624384268, guid: 35f9f530964384e4db542c93d4d8c95b, type: 3}
   - {fileID: 8576570976624384268, guid: 6d414884a2b22e644899093bb57650f2, type: 3}
